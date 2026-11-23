@@ -1,0 +1,281 @@
+---
+title: "2 · Table 1: main models"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 02_table1_main_models.ipynb
+  - text: R analysis source
+    icon: file-code
+    href: https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/code/02_table1.R
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/02_table1_main_models.qmd")
+library(here)
+knitr::read_chunk(here("code", "02_table1.R"))
+num <- function(x, digits = 2) formatC(x, format = "f", digits = digits, big.mark = ",")
+pval <- function(p) if (p < 0.001) "< 0.001" else paste("=", num(p, 3))
+```
+
+
+This page estimates Table 1 and the pooled friendship interaction from `data/generated/main/analysis_dyads.csv`. [Data and measures](01_data_and_measures.qmd) explains how that input is prepared.
+
+# The rank gradient in cooperation
+
+
+## What we want to measure
+
+Take one decision: child $i$ meets classmate $j$. Two things describe the pair:
+
+- the **Social Rank GAP**, $\text{Rank}_i - \text{Rank}_j$, between $-1$ and $1$. It is positive when $i$ is the higher-ranked child of the two;
+- the **Cooperation GAP**, tokens $i$ received from $j$ minus tokens $i$ sent to $j$, between $-10$ and $10$. It is positive when $i$ came out ahead.
+
+If cooperation were blind to rank, the Cooperation GAP would be unrelated to the rank gap. If lower-ranked children give more to higher-ranked classmates than they get back, the Cooperation GAP rises with the rank gap. The slope of that relation is the quantity of interest.
+
+Each pair appears twice in the data, once from each side, with both gaps changing sign. This is what we want: every child is a sender in some rows, and the model compares the same sender across her different partners.
+
+## Panel A: regression estimates {#panel-a}
+
+For a decision of sender $i$ toward partner $j$, in classroom $c$ and round $t$:
+
+$$
+\text{Coop GAP}_{ijct} = \beta\, \text{RankGAP}_{ij} + \eta_i + \kappa_{c \times t} + u_{ijct}
+$$
+
+Each term has a job:
+
+- $\eta_i$, **sender fixed effects**. Some children are generous with everyone, others with no one. The sender fixed effect absorbs each child's own level, so $\beta$ is estimated only from how the *same* child's exchanges differ across her partners.
+- $\kappa_{c\times t}$, **classroom-by-round fixed effects**. A classroom may be more cooperative overall, and giving may drift during the session. These fixed effects compare only decisions made in the same classroom and round, the unit within which partners were drawn at random.
+- **Standard errors clustered by classroom.** Decisions from the same classroom share children, teachers and nomination networks, so they are not independent. Clustering by classroom (45 clusters) allows for any correlation within a classroom.
+
+Because partners were assigned at random within each classroom and round, the rank of the partner a child met is unrelated to her own characteristics ([Figure 1D](03_figure1_partner_assignment.qmd) checks this). So $\beta$ can be read as how the same child's exchanges change when she happens to meet a higher- or lower-ranked classmate.
+
+The model is estimated separately in five samples, one per column of Table 1: all pairs, non-friends, mutual friends, and the two kinds of one-sided friendships, seen from the side of the child who named the other: a lower-ranked child naming a higher-ranked one (L→H) or the reverse (H→L).
+
+```{r table1-packages}
+#| code-summary: "table1-packages"
+```
+
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r table1-load}
+#| code-summary: "table1-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+```{r table1-samples}
+#| code-summary: "table1-samples"
+#| output: false
+```
+
+```{r show-table1-samples}
+#| code-summary: "show-table1-samples"
+sapply(samples, nrow)
+```
+
+The two one-sided samples are small (fewer than 1,000 decisions each, and few decisions per classroom and round), so they use classroom fixed effects instead of classroom-by-round fixed effects.
+
+The function `felm()` from the package **lfe** estimates linear models with many fixed effects. Its formula has four parts separated by `|`: the regression, the fixed effects, instruments (none here, `0`) and the variable that defines the clusters.
+
+```{r table1-models}
+#| code-summary: "table1-models"
+```
+
+### Example: the non-friend model
+
+For example, the summary below shows the model estimated among non-friends. The `rank_gap` row reports its estimated Social Rank GAP slope, classroom-clustered standard error, and p-value. The table below brings this estimate together with the other four samples.
+
+```{r show-non-friend-model}
+#| code-summary: "show-non-friend-model"
+summary(models[["Non-friends"]])
+```
+
+### Panel A results
+
+The tibble below collects the estimated coefficients, classroom-clustered standard errors, p-values, sample sizes, and model fit for the five samples.
+
+```{r table1-panel-a-results}
+#| code-summary: "table1-panel-a-results"
+#| output: false
+```
+
+```{r show-table1-panel-a-results}
+#| code-summary: "show-table1-panel-a-results"
+table1_panel_a
+```
+
+## Panel B: effects in more intuitive units
+
+A slope of $\beta$ tokens per unit of rank gap is hard to picture, because a full unit (from the bottom to the top of a classroom) is rare. Panel B expresses the same estimate in three other ways:
+
+- **in tokens**, for a typical difference in rank (one standard deviation of the Social Rank GAP);
+- **in standard deviations of the Cooperation GAP**, which makes the effect comparable across samples;
+- **model-adjusted**, using only the variation in the rank gap that remains after removing the fixed effects. This is the variation the model actually uses, so this number is the most conservative of the three.
+
+```{r table1-panel-b}
+#| code-summary: "table1-panel-b"
+```
+
+### Panel B results
+
+The tibble below contains the three effect-size transformations for each sample.
+
+```{r table1-panel-b-results}
+#| code-summary: "table1-panel-b-results"
+#| output: false
+```
+
+```{r show-table1-panel-b-results}
+#| code-summary: "show-table1-panel-b-results"
+table1_panel_b
+```
+
+## Table 1: estimates and standardized effects {#table-1}
+
+We combine both panels in Table 1.
+
+```{r table1-assemble}
+#| code-summary: "table1-assemble"
+#| output: false
+```
+
+```{r table1-display}
+#| code-summary: "table1-display"
+#| output: false
+```
+
+```{r table1-paper-layout}
+#| code-summary: "table1-paper-layout"
+#| results: asis
+# Use the computed display values for each cell; formatting does not alter estimates.
+table_value <- function(label) {
+  cells <- unlist(table1_display[table1_display$row == label, -1], use.names = FALSE)
+  cells <- htmltools::htmlEscape(cells)
+  gsub("(\\*+)$", "<sup>\\1</sup>", cells, perl = TRUE)
+}
+
+table_row <- function(label, values, class = "") {
+  paste0('<tr class="', class, '"><th scope="row">', label, '</th>',
+         paste0('<td>', values, '</td>', collapse = ""), '</tr>')
+}
+
+panel_row <- function(label) {
+  paste0('<tr class="panel-heading"><th colspan="6">', label, '</th></tr>')
+}
+
+table1_html <- paste0(
+  '<style>
+  .hierarchy-table1 { margin: 1.25rem 0; font-size: 0.9rem; line-height: 1.45; }
+  .hierarchy-table1 .table-scroll { overflow-x: auto; }
+  .hierarchy-table1 table { width: 100%; min-width: 710px; border-collapse: collapse; border-top: 2px solid #383838; border-bottom: 2px solid #383838; }
+  .hierarchy-table1 caption { caption-side: top; color: inherit; text-align: left; padding: 0 0 0.75rem; }
+  .hierarchy-table1 th, .hierarchy-table1 td { padding: 0.35rem 0.5rem; border: 0; background: transparent; }
+  .hierarchy-table1 thead th { text-align: center; vertical-align: bottom; font-weight: 600; border-bottom: 1px solid #383838; }
+  .hierarchy-table1 tbody th, .hierarchy-table1 tbody td[scope="row"] { text-align: left; font-weight: 400; white-space: normal; }
+  .hierarchy-table1 tbody td { text-align: center; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .hierarchy-table1 .panel-heading th, .hierarchy-table1 .panel-heading td { text-align: left; font-style: italic; font-weight: 600; border-top: 1px solid #383838; padding-top: 0.65rem; padding-bottom: 0.5rem; }
+  .hierarchy-table1 .standard-errors th, .hierarchy-table1 .standard-errors td { padding-top: 0; padding-bottom: 0.65rem; }
+  .hierarchy-table1 .table-notes { margin-top: 0.75rem; }
+  .hierarchy-table1 sup { font-size: 0.75em; }
+  </style>',
+  '<div class="hierarchy-table1"><div class="table-scroll">',
+  '<table aria-label="Table 1. Cooperation GAP models by relationship type">',
+  '<caption><strong>Table 1.</strong> Status differences and cooperative asymmetries at the dyadic level by relationship type</caption>',
+  '<thead><tr><th scope="col"></th>',
+  '<th scope="col">All dyads</th><th scope="col">Non-friends</th>',
+  '<th scope="col">Mutual friends</th><th scope="col">Asym.<br>(L&rarr;H)</th>',
+  '<th scope="col">Asym.<br>(H&rarr;L)</th></tr></thead><tbody>',
+  panel_row('Panel A: Dep. variable = Cooperation GAP (tokens received &minus; sent)'),
+  table_row('Social Rank GAP', table_value('Social Rank GAP')),
+  table_row('', table_value('(SE)'), 'standard-errors'),
+  table_row('Observations', table_value('Observations')),
+  table_row('R<sup>2</sup>', table_value('R2')),
+  table_row('R<sup>2</sup> adj.', table_value('R2 adj.')),
+  table_row('Sender FE', rep('Yes', 5)),
+  table_row('Class &times; round FE', c('Yes', 'Yes', 'Yes', 'No', 'No')),
+  table_row('Class FE', c('No', 'No', 'No', 'Yes', 'Yes')),
+  table_row('Round FE', rep('No', 5)),
+  panel_row('Panel B: Standardized effect (per 1 SD Social Rank GAP)'),
+  table_row('Effect in tokens', table_value('Effect in tokens')),
+  table_row('Effect in SD tokens', table_value('Effect in SD tokens')),
+  table_row('Effect in SD tokens<br>(model-adjusted)', table_value('Effect in SD (model-adj.)')),
+  '</tbody></table></div>',
+  '<p class="table-notes"><em>Notes:</em> Each column reports a separate linear regression of the Cooperation GAP on the Social Rank GAP. Standard errors in parentheses are clustered by classroom. L&rarr;H denotes a lower-ranked child nominating a higher-ranked child; H&rarr;L denotes the reverse. Panel B transforms the corresponding coefficient from Panel A using the within-sample standard deviations; the model-adjusted effect uses the rank-gap variation remaining after the fixed effects. <sup>*</sup> p &lt; 0.05, <sup>**</sup> p &lt; 0.01, <sup>***</sup> p &lt; 0.001.</p>',
+  '</div>'
+)
+
+
+```
+
+```{r show-table1}
+#| code-summary: "show-table1"
+#| results: asis
+if (isTRUE(getOption("knitr.in.progress"))) {
+  knitr::asis_output(table1_html)
+} else if (requireNamespace("IRdisplay", quietly = TRUE)) {
+  IRdisplay::display_html(table1_html)
+} else {
+  cat(table1_html)
+}
+```
+
+```{r}
+#| include: false
+b <- function(sample, what = "beta") table1[[what]][table1$sample == sample]
+```
+
+**How to read it.** Among non-friends, a one-unit increase in the Social Rank GAP raises the Cooperation GAP by `r num(b("Non-friends"))` tokens (SE `r num(b("Non-friends", "se"))`, P `r pval(b("Non-friends", "p_value"))`), in favor of the higher-ranked child. Over the full range, from the lowest- to the highest-ranked child of a classroom (a gap of 2), this is about `r num(2 * b("Non-friends"), 1)` tokens out of 10. Among mutual friends the slope is `r num(b("Mutual friends"))` and not distinguishable from zero. The column with all pairs is close to the non-friends column, because non-friends are 78% of the pairs.
+
+In the one-sided friendships, the L→H slope (`r num(b("Asym. (L->H)"))`) looks like the non-friend slope. The H→L estimate is imprecise (SE `r num(b("Asym. (H->L)", "se"))`), as this sample is the smallest.
+
+The $R^2$ is high in the small samples because the many fixed effects explain much of the variation when each child contributes only a few decisions; the adjusted $R^2$ corrects for the number of fixed effects.
+
+## Is the slope flatter among mutual friends?
+
+Separate regressions describe each group but do not test whether two slopes differ. For that we pool non-friends and mutual friends in a single model and let the slope change with friendship:
+
+$$
+\text{Coop GAP}_{ijct} = \beta_1 \text{RankGAP}_{ij} + \beta_2\, \text{Mutual}_{ij}
+ + \beta_3 \,(\text{RankGAP}_{ij} \times \text{Mutual}_{ij}) + \eta_i + \kappa_{c\times t} + u_{ijct}
+$$
+
+$\beta_1$ is the slope among non-friends, and $\beta_1 + \beta_3$ the slope among mutual friends. The test of interest is $\beta_3 = 0$.
+
+```{r pooled-interaction}
+#| code-summary: "pooled-interaction"
+#| output: false
+```
+
+```{r show-pooled-interaction}
+#| code-summary: "show-pooled-interaction"
+pooled_table
+```
+
+```{r}
+#| include: false
+b3   <- pooled_table$Estimate[pooled_table$term == "rank_gap:mutual"]
+b3_p <- pooled_table$`Pr(>|t|)`[pooled_table$term == "rank_gap:mutual"]
+b1   <- pooled_table$Estimate[pooled_table$term == "rank_gap"]
+```
+
+The interaction is $\beta_3$ = `r num(b3, 3)` (P `r pval(b3_p)`): among mutual friends the rank gradient is `r num(b1 + b3)` tokens instead of `r num(b1)`, a reduction of about `r round(100 * -b3 / b1)`%. The level difference $\beta_2$ is close to zero. This is expected: the two decisions of a pair have Cooperation GAPs of opposite sign, so a characteristic shared by both children of the pair, such as being mutual friends, can hardly shift the level of the Cooperation GAP; what it can change is the slope.
+
+```{r table1-save}
+#| code-summary: "table1-save"
+```
+
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+[Continue to Figure 1D: partner assignment](03_figure1_partner_assignment.qmd).

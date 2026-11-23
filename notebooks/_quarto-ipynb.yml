@@ -1,0 +1,38 @@
+# Profile that writes the same pages as Jupyter notebooks (R code, with
+# outputs), for reading directly on GitHub:
+#
+#   quarto render notebooks --profile ipynb --to ipynb
+#
+# The post-render script places the .ipynb files beside the .qmd sources.
+project:
+  output-dir: _notebook-build
+  resources:
+    - '!main/*.ipynb'
+    - '!si/*.ipynb'
+  render:
+    - main/01_data_and_measures.qmd
+    - main/02_table1_main_models.qmd
+    - main/03_figure1_partner_assignment.qmd
+    - main/04_figure2_classroom_networks.qmd
+    - main/05_figure3a_exchange_patterns.qmd
+    - main/06_figure3b_tokens_by_rank.qmd
+    - main/07_figure3c_cooperation_gap.qmd
+    - main/figure3_assembly.qmd
+    - main/08_numbers_in_text.qmd
+    - si/S1_study_design.qmd
+    - si/S2_nomination_survey.qmd
+    - '!index.qmd'
+    - '!main/index.qmd'
+    - '!main/figure3_index.qmd'
+    - '!si/index.qmd'
+  post-render: _tools/finish_ipynb.R
+
+format:
+  ipynb:
+    filters:
+      - path: _tools/unwrap_callouts.lua
+        at: pre-quarto
+    df-print: kable
+    # keep each HTML table as it is (one output per table)
+    html-table-processing: none
+    from: markdown-markdown_in_html_blocks

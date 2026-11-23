@@ -1,0 +1,38 @@
+---
+title: "Main Results"
+---
+
+Start with **Data and measures** for the definitions and the preparation steps. Each result can also run on its own: it reuses prepared data in the R session, loads the saved CSV files, or builds them on first use. The [Figure 3 index](figure3_index.qmd) groups its three columns and the complete assembly into four subpages.
+
+## Notebook index
+
+| Notebook | Jupyter download | What it covers |
+|---|---|---|
+| [1 · Data and measures](01_data_and_measures.qmd) | [Download](01_data_and_measures.ipynb) | Inputs, data loading and preparation, Social Rank normalization, the null-model filter, and the main data dictionary. |
+| [2 · Table 1: main models](02_table1_main_models.qmd) | [Download](02_table1_main_models.ipynb) | Five regression samples, fixed effects, effect sizes, and the pooled friendship interaction. |
+| [3 · Figure 1D: partner assignment](03_figure1_partner_assignment.qmd) | [Download](03_figure1_partner_assignment.ipynb) | Centered assigned partner rank and the balance check. |
+| [4 · Figure 2: classroom networks](04_figure2_classroom_networks.qmd) | [Download](04_figure2_classroom_networks.ipynb) | Friendship, popularity, non-popularity, and game transfers in one classroom. |
+| [5 · Figure 3](figure3_index.qmd) | [A](05_figure3a_exchange_patterns.ipynb) · [B](06_figure3b_tokens_by_rank.ipynb) · [C](07_figure3c_cooperation_gap.ipynb) · [Complete](figure3_assembly.ipynb) | Exchange patterns, tokens by rank, the Cooperation GAP, and the complete nine-panel assembly. |
+| [6 · Numbers in the main text](08_numbers_in_text.qmd) | [Download](08_numbers_in_text.ipynb) | Sample and design counts, quartile comparisons, filtered models, and other cited quantities. |
+
+## Explore Figure 3
+
+[Open the Figure 3 index](figure3_index.qmd) to browse the four subpages.
+
+[Exchange patterns (A)](05_figure3a_exchange_patterns.qmd) · [Tokens by rank (B)](06_figure3b_tokens_by_rank.qmd) · [Cooperation GAP (C)](07_figure3c_cooperation_gap.qmd) · [Complete figure](figure3_assembly.qmd#complete-figure-3)
+
+## Data flow
+
+Raw study records → paired transfers, friendship, ranks and gaps → null-model filter → saved main analysis data → models, tables and figures. The student file adds only the ranks and the standardized attendance needed for Figure 1D. [Data and measures](01_data_and_measures.qmd) gives the complete filter procedure and dictionary.
+
+## Reproduce the main results
+
+Run this command from the repository root after installing the R dependencies listed in the repository README. The `main` argument selects Table 1, Figures 1D–3, and the numbers reported in the main text.
+
+```sh
+Rscript code/run_all.R main
+```
+
+The main scripts write the analysis datasets to `data/generated/main/`, the tables to `output/tables/`, and the figures to `output/figures/`. The formatted Table 1 is `output/tables/table1_display.csv`.
+
+In Jupyter, **Data and measures** builds the shared analysis data from the raw records and saves the two completed tables at the end. Every result notebook checks for those data on entry, so it can be run independently. The Figure 3 pages create their own exchange-cell, child-level, and rank-interval summaries after loading the shared data. Each result page offers a Jupyter download; the website sidebar, page contents, and previous/next navigation provide additional ways to browse. For supplementary analyses, see the [Supporting Information index](../si/index.qmd).

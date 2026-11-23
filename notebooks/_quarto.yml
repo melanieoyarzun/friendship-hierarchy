@@ -1,0 +1,82 @@
+project:
+  type: website
+  output-dir: _site
+  execute-dir: project
+  resources:
+    - assets/study-design_20261122.png
+    - assets/study-design_20261122.pdf
+    - main/*.ipynb
+    - si/S1_study_design.ipynb
+    - si/S2_nomination_survey.ipynb
+    - main/figure3_assembled_20261121.pdf
+    - main/figure3_assembled_20261121.png
+  render:
+    - index.qmd
+    - main/index.qmd
+    - main/01_data_and_measures.qmd
+    - main/02_table1_main_models.qmd
+    - main/03_figure1_partner_assignment.qmd
+    - main/04_figure2_classroom_networks.qmd
+    - main/figure3_index.qmd
+    - main/05_figure3a_exchange_patterns.qmd
+    - main/06_figure3b_tokens_by_rank.qmd
+    - main/07_figure3c_cooperation_gap.qmd
+    - main/figure3_assembly.qmd
+    - main/08_numbers_in_text.qmd
+    - si/index.qmd
+    - si/S1_study_design.qmd
+    - si/S2_nomination_survey.qmd
+
+website:
+  title: "Friendship, Hierarchy & Cooperation"
+  site-url: https://melanieoyarzun.github.io/friendship-hierarchy/
+  page-navigation: true
+  # Update this and the notebook code-links when publishing from a new repository or branch.
+  repo-url: https://github.com/melanieoyarzun/friendship-hierarchy
+  repo-branch: main
+  repo-subdir: notebooks
+  repo-actions: [source, issue]
+  sidebar:
+    style: docked
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/melanieoyarzun/friendship-hierarchy
+        aria-label: GitHub repository
+    contents:
+      - href: index.qmd
+        text: Overview
+      - section: "Main Results"
+        href: main/index.qmd
+        contents:
+          - main/01_data_and_measures.qmd
+          - main/02_table1_main_models.qmd
+          - main/03_figure1_partner_assignment.qmd
+          - main/04_figure2_classroom_networks.qmd
+          - section: "5 · Figure 3"
+            href: main/figure3_index.qmd
+            contents:
+              - main/05_figure3a_exchange_patterns.qmd
+              - main/06_figure3b_tokens_by_rank.qmd
+              - main/07_figure3c_cooperation_gap.qmd
+              - main/figure3_assembly.qmd
+          - main/08_numbers_in_text.qmd
+      - section: "Supporting Information"
+        href: si/index.qmd
+        contents:
+          - si/S1_study_design.qmd
+          - si/S2_nomination_survey.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true          # code hidden behind a "Show code" arrow
+    code-summary: "Show code"
+    code-tools: true         # menu to show or hide all code on a page
+    lightbox: auto           # click on a figure to see it large
+    df-print: kable
+
+execute:
+  warning: false
+  message: false

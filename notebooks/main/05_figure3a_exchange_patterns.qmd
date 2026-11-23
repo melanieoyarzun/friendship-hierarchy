@@ -1,0 +1,141 @@
+---
+title: "A · Exchange patterns"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 05_figure3a_exchange_patterns.ipynb
+  - text: R analysis source
+    icon: file-code
+    href: https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/code/05_figure3_cooperation.R
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/05_figure3a_exchange_patterns.qmd")
+library(here)
+knitr::read_chunk(here("code", "05_figure3_cooperation.R"))
+```
+
+
+[Figure 3 index](figure3_index.qmd) · [Complete assembly](figure3_assembly.qmd#complete-figure-3).
+
+
+Figure 3A asks what each pair exchanges, before introducing Social Rank. This page shows the three heatmaps separately. [Figure 3B](06_figure3b_tokens_by_rank.qmd) then adds rank differences, and [Figure 3C](07_figure3c_cooperation_gap.qmd) shows the Cooperation GAP. The [assembly page](figure3_assembly.qmd) combines all nine panels with the row headers.
+
+# From directed decisions to exchange cells
+
+Each unordered pair has two transfers, `tokens_sent` and `tokens_received`, both on the original 0–10 allocation scale. The larger transfer is stored as `high` and the smaller as `low`; folding the grid this way puts both orientations of the pair in the same cell. These axes describe the larger and smaller transfer, regardless of which child has higher Social Rank.
+
+The heatmaps use three groups: non-friends, mutual friends, and all asymmetric friendships. Both nomination directions enter the asymmetric heatmap. Each pair appears in two directed rows, so counting both rows doubles every cell count equally and leaves the within-group percentages unchanged.
+
+```{r fig3-packages}
+#| code-summary: "fig3-packages"
+```
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r fig3-load}
+#| code-summary: "fig3-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+The next chunk builds two auxiliary tables for panel A from `analysis_dyads`. `heatmap_cells` contains the exchange-cell counts and percentages; `heatmap_regions` sums the percentages within each highlighted region. The heatmap function uses these tables to draw the panels.
+
+```{r heatmap-data}
+#| output: false
+#| code-summary: "heatmap-data"
+```
+
+```{r show-heatmap-regions}
+#| code-summary: "show-heatmap-regions"
+heatmap_regions
+```
+
+The highlighted regions have explicit definitions: both transfers at most one token; one transfer of ten and the other at most five; and both transfers equal to ten. The unequal-exchange region is narrower than a rule based on any difference of at least five tokens.
+
+# Inspect the underlying percentages
+
+The table below lists the five most frequent exchange cells within each relationship group. `high` and `low` give the two heatmap coordinates, and `percent` gives the value drawn in that cell.
+
+```{r inspect-heatmap-percentages}
+#| code-summary: "inspect-heatmap-percentages"
+heatmap_cells %>%
+  group_by(group) %>%
+  slice_max(percent, n = 5, with_ties = FALSE) %>%
+  ungroup()
+```
+
+# Example: draw non-friends directly
+
+Draw the non-friend heatmap from its cell percentages and region totals using explicit `ggplot()` layers. The plot uses the same cells, annotations, and scales as the function below.
+
+```{r heatmap-example}
+#| code-summary: "heatmap-example"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-heatmap-example}
+#| code-summary: "show-heatmap-example"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+heatmap_non_friends
+```
+
+# The reusable heatmap function
+
+The function below packages the same layers. Its argument selects a relationship group from the tables inspected above.
+
+```{r heatmap-function}
+#| code-summary: "heatmap-function"
+#| code-fold: show
+```
+
+# Mutual friends
+
+```{r heatmap-mutual}
+#| code-summary: "heatmap-mutual"
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-heatmap-mutual}
+#| code-summary: "show-heatmap-mutual"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+heatmap_mutual
+```
+
+# Asymmetric friendships
+
+```{r heatmap-asymmetric}
+#| code-summary: "heatmap-asymmetric"
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-heatmap-asymmetric}
+#| code-summary: "show-heatmap-asymmetric"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+heatmap_asymmetric
+```
+
+The command-line replication saves the full cell table as `output/tables/figure3_heatmap_cells.csv`. The [Figure 3 summary dictionary](figure3_index.qmd#figure-3-summary-tables) defines these fields and the summaries used in the next two pages.
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+[Continue to Figure 3B: tokens by rank](06_figure3b_tokens_by_rank.qmd).

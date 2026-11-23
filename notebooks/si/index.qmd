@@ -1,0 +1,20 @@
+---
+title: "Supporting Information"
+---
+
+| Section | What it covers |
+|---|---|
+| [S1 · Study design and data description](S1_study_design.qmd) | Classroom characteristics, sample coverage, and data completeness. |
+| [S2 · Peer-nomination survey](S2_nomination_survey.qmd) | Nomination counts, the cap of five, and consistency of the popularity questions. |
+
+## Reproduce the Supporting Information
+
+From the repository root, run:
+
+```sh
+Rscript code/run_all.R
+```
+
+This runs the main analyses followed by Supporting Information. The supplementary scripts use the same prepared data as the main results and build missing inputs on first use. Tables are saved in `output/tables/si/` and figures in `output/figures/si/`.
+
+*Release note: Supporting Information currently includes S1 and S2. The remaining sections will be added in subsequent updates.*

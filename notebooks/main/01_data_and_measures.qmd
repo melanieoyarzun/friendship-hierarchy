@@ -1,0 +1,240 @@
+---
+title: "1 · Data and measures"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 01_data_and_measures.ipynb
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/01_data_and_measures.qmd")
+library(here)
+knitr::read_chunk(here("code", "01_build_main_data.R"))
+```
+
+
+This page builds the shared analysis data from the raw study records. The inputs have one row per child and one row per directed decision: child $i$ sends tokens to classmate $j$.
+
+The preparation keeps the original fields and adds paired transfers, friendship type, Social Rank, the two gaps, and the quantities needed for the null-model filter. The student file adds `pagerank`, `social_rank`, and `attendance_z`; Figure 1D uses attendance standardized within classroom and GPA on its original scale.
+
+# What each step builds
+
+Run this page from top to bottom to build the data. The steps add columns to the same two working tables, `dyads` and `students`. Tables such as the reverse decisions, popularity edges, and simulated transfers are intermediate objects in R. They are used in the next calculation; they are not saved as separate datasets.
+
+| Step | Working table | Columns added |
+|---|---|---|
+| 1. Match reverse decisions | `dyads` | `tokens_received` |
+| 2. Cooperation GAP | `dyads` | `coop_gap` |
+| 3. Friendship type | `dyads` | `friendship` |
+| 4. Social Rank | `students` | `pagerank`, `social_rank` |
+| 5. Social Rank GAP | `dyads` | `sender_rank`, `receiver_rank`, `rank_gap` |
+| 6. Balance covariates | `students` | `attendance_z` |
+| 7. Null-model filter | `dyads` | Null means, SDs, departure scores, filtered transfers, and `coop_gap_filtered` |
+
+Only the final **Save the prepared data** step writes files: `analysis_dyads.csv` and `analysis_students.csv` in `data/generated/main/`. The table and figure pages then reuse these objects in R or read their saved CSV files. If those inputs are missing, a result page runs this preparation automatically.
+
+```{r packages}
+#| code-summary: "packages"
+```
+
+# Inputs and units
+
+Download the [data and code from GitHub (ZIP)](https://github.com/melanieoyarzun/friendship-hierarchy/archive/refs/heads/main.zip). The input files are in `data/raw/`: [students.csv](https://raw.githubusercontent.com/melanieoyarzun/friendship-hierarchy/main/data/raw/students.csv), [dyads.csv](https://raw.githubusercontent.com/melanieoyarzun/friendship-hierarchy/main/data/raw/dyads.csv), and [null_model_order.csv](https://raw.githubusercontent.com/melanieoyarzun/friendship-hierarchy/main/data/raw/null_model_order.csv). The [raw-data dictionary](https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/data/raw/codebook.md) describes their fields.
+
+The game involved 859 children in 45 classrooms. Each child allocated 0–10 tokens to each classmate. For a pair, the dataset contains both $i \to j$ and $j \to i$. `tokens_sent` and `tokens_received` record the original allocations before the game's doubling of received tokens.
+
+```{r read-data}
+#| code-summary: "read-data"
+#| output: false
+```
+
+```{r inspect-inputs}
+#| code-summary: "inspect-inputs"
+tibble(children = nrow(students), classrooms = n_distinct(dyads$class_id),
+       directed_decisions = nrow(dyads))
+```
+
+```{r inspect-decisions}
+#| code-summary: "inspect-decisions"
+dyads %>% select(class_id, round, sender_id, receiver_id, tokens_sent) %>% head()
+```
+
+# Step 1. Match the partner's transfer
+
+`tokens_received` is the partner's transfer in the reverse decision. Both decisions of a pair occur in the same classroom and round. Matching the two directions preserves all 17,804 directed rows.
+
+```{r tokens-received}
+#| code-summary: "tokens-received"
+#| output: false
+```
+
+```{r inspect-paired-transfers}
+#| code-summary: "inspect-paired-transfers"
+dyads %>% select(sender_id, receiver_id, tokens_sent, tokens_received) %>% head()
+```
+
+# Step 2. Cooperation GAP
+
+`coop_gap = tokens_received - tokens_sent`, in tokens, with range −10 to 10. A positive value means the focal child receives more than she sends. This is a difference in allocations, with no normalization or payoff multiplier. The reverse decision has the opposite gap.
+
+```{r cooperation-gap}
+#| code-summary: "cooperation-gap"
+```
+
+```{r inspect-coop-gap}
+#| code-summary: "inspect-coop-gap"
+summary(dyads$coop_gap)
+```
+
+# Step 3. Friendship type
+
+Question 3 asked for best friends. `friendship` is `Mutual` if both children named each other, `Non-friends` if neither did, and one-sided if only one did. The two one-sided directions are `Sender declares` and `Receiver declares`.
+
+```{r friendship-type}
+#| code-summary: "friendship-type"
+#| output: false
+```
+
+```{r inspect-friendship}
+#| code-summary: "inspect-friendship"
+dyads %>% count(friendship) %>% mutate(percent = 100 * n / sum(n))
+```
+
+# Step 4. Social Rank
+
+Within each classroom, the popularity network combines positive nominations (Q4) and negative nominations (Q5). The edge from $i$ to $j$ has weight $a_{ij}=P^+_{ij}-P^-_{ij}+1$: 2 for a positive nomination alone, 0 for a negative nomination alone, and 1 when the two answers cancel or neither nomination is present.
+
+```{r popularity-network}
+#| code-summary: "popularity-network"
+#| output: false
+```
+
+```{r inspect-popularity-weights}
+#| code-summary: "inspect-popularity-weights"
+popularity_edges %>% count(weight)
+```
+
+PageRank uses damping 0.85. It is normalized within each classroom as `(pagerank - min(pagerank)) / (max(pagerank) - min(pagerank))` to obtain `social_rank` from 0 to 1.
+
+```{r pagerank}
+#| code-summary: "pagerank"
+#| output: false
+```
+
+```{r inspect-social-rank}
+#| code-summary: "inspect-social-rank"
+students %>% filter(class_id == 16) %>%
+  select(student_id, female, pagerank, social_rank) %>% arrange(desc(social_rank))
+```
+
+# Step 5. Social Rank GAP
+
+`rank_gap = sender_rank - receiver_rank`, from −1 to 1. Positive values mean the sender has higher Social Rank. Normalization has already occurred in `social_rank`; the gap is not standardized again. Rounding to ten decimal places removes numerical noise around equal ranks.
+
+```{r rank-gap}
+#| code-summary: "rank-gap"
+#| output: false
+```
+
+```{r inspect-rank-gap}
+#| code-summary: "inspect-rank-gap"
+summary(dyads$rank_gap)
+```
+
+# Step 6. Attendance for the balance check
+
+Figure 1D compares partner rank with the sender's sex, attendance, and GPA. Attendance is standardized within classroom as `(attendance - mean(attendance)) / sd(attendance)`, with missing values omitted when computing the mean and SD. GPA retains its original 1–7 scale.
+
+```{r main-student-covariates}
+#| code-summary: "main-student-covariates"
+```
+
+```{r inspect-balance-covariates}
+#| code-summary: "inspect-balance-covariates"
+students %>% select(student_id, class_id, female, attendance, attendance_z, gpa) %>% head()
+```
+
+# Step 7. Null-model filter
+
+The filter keeps transfers that depart most from the sender's allocation pattern under a random reassignment of partners. It starts from all directed transfers, including zeros.
+
+## 7a. Fix the simulation settings
+
+```{r filter-settings}
+#| code-summary: "filter-settings"
+```
+
+For each sender, shuffle her allocations across her classmates 1,000 times, excluding herself. Each shuffle preserves the same amounts, their total, and the zeros; only their recipients change. The seed is 109. `data/raw/null_model_order.csv` fixes the sequence of classrooms and children that consume the random draws. Its ordering fields are simulation instructions.
+
+## 7b. Score each observed transfer
+
+For each directed transfer, save the mean and SD of its 1,000 simulated values as `null_mean` and `null_sd`. The departure score is
+
+$$
+d_{ij}=\frac{|w_{ij}-\mu^{\mathrm{null}}_{ij}|}{\sigma^{\mathrm{null}}_{ij}}.
+$$
+
+When the null SD is zero, set the score to zero. This occurs when a sender allocates the same amount to every classmate. The score measures distance from the null mean; it is not a p-value.
+
+```{r null-model-score}
+#| code-summary: "null-model-score"
+#| output: false
+```
+
+```{r inspect-filter-scores}
+#| code-summary: "inspect-filter-scores"
+example_sender <- dyads$sender_id[1]
+dyads %>% filter(sender_id == example_sender) %>%
+  select(receiver_id, tokens_sent, null_mean, null_sd, departure) %>%
+  arrange(desc(departure))
+```
+
+## 7c. Retain transfers and match the two directions
+
+Rank all transfers in the sample by `departure` and take the cutoff at 50% retention. This is one cutoff across the full sample. Keep scores at or above the cutoff, so ties at the boundary are kept. Excluded transfers become `NA`: a retained allocation of zero remains a real zero.
+
+The reverse direction is filtered using its own departure score. Thus `tokens_sent_filtered` and `tokens_received_filtered` can be missing separately. `coop_gap_filtered` is defined only when both transfers are retained.
+
+```{r null-model-filter}
+#| code-summary: "null-model-filter"
+#| output: false
+```
+
+```{r inspect-filtered-sample}
+#| code-summary: "inspect-filtered-sample"
+tibble(cutoff = cutoff, directed_decisions = nrow(dyads),
+       retained_transfers = sum(!is.na(dyads$tokens_sent_filtered)),
+       decisions_with_both_retained = sum(!is.na(dyads$coop_gap_filtered)),
+       pairs_with_both_retained = sum(!is.na(dyads$coop_gap_filtered)) / 2)
+```
+
+For these data, 8,902 of 17,804 transfers are retained. Both directions pass for 4,592 directed decisions, representing 2,296 pairs. The filtered regressions use `coop_gap_filtered`.
+
+# Save the prepared data
+
+The completed working tables become `analysis_dyads` and `analysis_students` and are saved as the two CSV files below. No earlier step writes an analysis file. Running this page again rebuilds both files from the raw records. The saved dyad data include the null means, SDs, and departure scores, so the filter can be inspected after reloading.
+
+```{r save}
+#| code-summary: "save"
+#| output: false
+```
+
+```{r show-prepared-data}
+#| code-summary: "show-prepared-data"
+tibble(object = c("analysis_dyads", "analysis_students"),
+       saved_file = c("analysis_dyads.csv", "analysis_students.csv"),
+       rows = c(nrow(analysis_dyads), nrow(analysis_students)),
+       columns = c(ncol(analysis_dyads), ncol(analysis_students)))
+```
+
+Continue to [Table 1](02_table1_main_models.qmd), or choose a result from the [Main Results index](index.qmd). The later notebooks load these prepared data before fitting a model or constructing a figure.
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+{{< include ../../data/main_codebook.md >}}

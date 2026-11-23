@@ -1,0 +1,149 @@
+---
+title: "6 · Numbers in the main text"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 08_numbers_in_text.ipynb
+  - text: R analysis source
+    icon: file-code
+    href: https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/code/06_numbers_in_text.R
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/08_numbers_in_text.qmd")
+library(here)
+knitr::read_chunk(here("code", "06_numbers_in_text.R"))
+```
+
+
+
+This page computes the additional numbers quoted in the main text from the prepared student and dyad datasets. Its calculations include the all-dyad model needed for the quartile comparison, so no saved Table 1 is required.
+
+**Sample and design.** Size of the sample, number of decisions per child and rounds per classroom.
+
+```{r numbers-packages}
+#| code-summary: "numbers-packages"
+```
+
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r numbers-load}
+#| code-summary: "numbers-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+```{r numbers-sample}
+#| code-summary: "numbers-sample"
+#| output: false
+```
+
+```{r show-numbers-sample}
+#| code-summary: "show-numbers-sample"
+numbers[c("children", "classrooms", "schools", "decisions", "percent_female", "age_mean", "age_sd")]
+```
+
+```{r numbers-design}
+#| code-summary: "numbers-design"
+#| output: false
+```
+
+```{r show-numbers-design}
+#| code-summary: "show-numbers-design"
+numbers[grepl("per_|pairs", names(numbers))]
+```
+
+**Friendship.** Share of non-friend, mutual and one-sided pairs.
+
+```{r numbers-friendship}
+#| code-summary: "numbers-friendship"
+#| output: false
+```
+
+```{r show-numbers-friendship}
+#| code-summary: "show-numbers-friendship"
+friendship_shares
+```
+
+**Rank differences children actually meet.** The full range of the rank gap (from bottom to top of a classroom) occurs for only one pair per classroom. This block looks at a more common contrast: pairs between a child in the top quarter of the classroom ranking and one in the bottom quarter, and the Cooperation GAP that Table 1 predicts for them.
+
+```{r numbers-quartiles}
+#| code-summary: "numbers-quartiles"
+#| output: false
+```
+
+```{r show-numbers-quartiles}
+#| code-summary: "show-numbers-quartiles"
+numbers[c("percent_top_vs_bottom_pairs", "predicted_coop_gap_top_to_bottom", "observed_coop_gap_top_to_bottom")]
+```
+
+**Filtered analysis.** The Table 1 model uses `coop_gap_filtered`, which is observed only when both directed transfers pass the filter. Figure 3C summarizes retained transfers within children instead; its filtered curve and these regressions use different aggregation rules.
+
+```{r numbers-filtered}
+#| code-summary: "numbers-filtered"
+#| output: false
+```
+
+```{r show-numbers-filtered}
+#| code-summary: "show-numbers-filtered"
+rbind(all = filtered_all, non_friends = filtered_non, mutual = filtered_mut)
+```
+
+**One-sided friendships.** How often the exchanges fall in each region of Figure 3A.
+
+```{r numbers-asymmetric}
+#| code-summary: "numbers-asymmetric"
+#| output: false
+```
+
+```{r show-numbers-asymmetric}
+#| code-summary: "show-numbers-asymmetric"
+numbers[c("percent_full_cooperation_asym", "percent_strongly_asymmetric_asym", "percent_blue_region_asym")]
+```
+
+**A rank read off the game.** Instead of nominations, rank can be computed from the token network itself (PageRank on who gives to whom). This block correlates that behavioral rank with the nomination-based Social Rank.
+
+```{r numbers-behavioral-rank}
+#| code-summary: "numbers-behavioral-rank"
+#| output: false
+```
+
+```{r show-numbers-behavioral-rank}
+#| code-summary: "show-numbers-behavioral-rank"
+numbers[grepl("spearman", names(numbers))]
+```
+
+**Response quality.** Children who named the same classmate as both popular and not popular, and the time between consecutive decisions.
+
+```{r numbers-quality}
+#| code-summary: "numbers-quality"
+#| output: false
+```
+
+```{r show-numbers-quality}
+#| code-summary: "show-numbers-quality"
+numbers[c("conflicting_popularity_pairs", "children_with_conflict", "classes_with_conflict", "percent_of_popularity_nominations", "median_seconds_between_decisions", "classes_with_timing")]
+```
+
+```{r numbers-save}
+#| code-summary: "numbers-save"
+#| output: false
+```
+
+```{r show-numbers-save}
+#| code-summary: "show-numbers-save"
+numbers_table
+```
+
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```

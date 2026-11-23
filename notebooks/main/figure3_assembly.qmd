@@ -1,0 +1,124 @@
+---
+title: "Complete Figure 3"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: figure3_assembly.ipynb
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/figure3_assembly.qmd")
+library(here)
+knitr::read_chunk(here("code", "05_figure3_cooperation.R"))
+knitr::read_chunk(here("code", "05_figure3_assembly_20261121.R"))
+```
+
+[Figure 3 index](figure3_index.qmd).
+
+This page assembles the three figure columns into one layout. The plotting values and intervals are the same as in [A](05_figure3a_exchange_patterns.qmd), [B](06_figure3b_tokens_by_rank.qmd), and [C](07_figure3c_cooperation_gap.qmd). Each row has a colored relationship header and each data panel carries its A–C label.
+
+# Prepare the data and plotting functions
+
+The auxiliary tables and their construction are explained in [A](05_figure3a_exchange_patterns.qmd), [B](06_figure3b_tokens_by_rank.qmd), and [C](07_figure3c_cooperation_gap.qmd). The chunks below repeat that construction so this page can run on its own.
+
+## Read the prepared data
+
+```{r fig3-packages}
+#| code-summary: "fig3-packages"
+```
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r fig3-load}
+#| code-summary: "fig3-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+## Build the exchange cells for A
+
+```{r heatmap-data}
+#| code-summary: "heatmap-data"
+#| output: false
+```
+
+## Build the child summaries and rank intervals for B and C
+
+```{r binned-data}
+#| code-summary: "binned-data"
+```
+
+```{r child-summary}
+#| code-summary: "child-summary"
+#| output: false
+```
+
+```{r bin-table}
+#| code-summary: "bin-table"
+#| output: false
+```
+
+## Define the plotting functions
+
+These functions draw the nine panels from the auxiliary tables above.
+
+```{r heatmap-function}
+#| code-summary: "heatmap-function"
+```
+
+```{r panel-b-function}
+#| code-summary: "panel-b-function"
+```
+
+```{r panel-c-function}
+#| code-summary: "panel-c-function"
+```
+
+# Row headers and layout
+
+The layout functions use the figure color roles and the shared export helper. The three rows are I, non-friends; II, mutual friends; and III, sender-declared one-sided friendships. In row III, A includes both nomination directions while B and C use the sender-declared direction.
+
+```{r figure3-assembly-style}
+#| code-summary: "figure3-assembly-style"
+```
+
+```{r figure3-assembly-functions}
+#| code-summary: "figure3-assembly-functions"
+#| code-fold: show
+```
+
+# Complete Figure 3 {#complete-figure-3}
+
+```{r build-complete-figure}
+#| code-summary: "build-complete-figure"
+figure3_assembled <- assemble_figure3(plot_heatmap, plot_tokens, plot_coop_gap)
+```
+
+```{r show-complete-figure}
+#| code-summary: "show-complete-figure"
+#| code-fold: show
+#| fig-width: 13
+#| fig-height: 12
+figure3_assembled
+```
+
+# Export the assembled figure
+
+```{r figure3-assembly-save}
+#| code-summary: "figure3-assembly-save"
+```
+
+[Download PDF](figure3_assembled_20261121.pdf) · [Download PNG](figure3_assembled_20261121.png).
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+[Continue to numbers cited in the main text](08_numbers_in_text.qmd).

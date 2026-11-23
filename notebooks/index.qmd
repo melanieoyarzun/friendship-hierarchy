@@ -1,0 +1,42 @@
+---
+title: "Friendship Modulates the Expression of Hierarchy in Cooperation"
+subtitle: "Replication companion website"
+author: "Melanie Oyarzun, Carlos Rodriguez-Sickert, and Cristian Candia"
+repo-actions: false
+toc: false
+---
+
+This is the website version of the replication package. You can explore the analyses, code, tables, and figures here, or [browse the repository on GitHub](https://github.com/melanieoyarzun/friendship-hierarchy/tree/main) to inspect the data, scripts, and notebooks directly.
+
+- [**Main Results**](main/index.qmd): data preparation, Table 1, Figures 1D–3, and the other numbers reported in the main text.
+- [**Supporting Information**](si/index.qmd): the supplementary analyses, organized by section.
+
+The raw data are archived on [Zenodo](https://doi.org/10.5281/zenodo.24210703).
+
+## Abstract
+
+Human interaction is often structured by social hierarchy, generating systematic asymmetries in attention, influence, and resource exchange. While such hierarchies can facilitate coordination, they also produce persistent inequalities. Although hierarchy-related asymmetries are widely documented, less is known about how they are shaped by voluntary social ties in everyday cooperative behavior. Here, we examine how social status and friendship jointly structure cooperation using a large-scale social-dilemma experiment embedded in real classroom networks. In the experiment, 859 children in 45 elementary school classrooms (grades 3–5) were paired with different classmates across rounds according to a randomized round-robin partner schedule that prevents endogenous partner selection. Analyzing 17,804 directed allocation decisions, we show that cooperation is, on average, skewed toward higher-status peers: children allocate more resources to higher-ranked classmates and receive less in return. However, this pattern is not uniform. Within mutually recognized friendships, status-based asymmetries in cooperation are strongly attenuated, yielding more balanced and generous exchanges across rank positions. When friendship recognition is unreciprocated, one-sided friendship nominations show descriptively different patterns by nomination direction: downward recognition from higher- to lower-status peers is closer to the balanced exchange observed among mutual friends, whereas upward recognition resembles hierarchy-associated asymmetries. Together, these findings show that the expression of hierarchy in cooperation is conditional on relational context rather than structurally fixed. More broadly, this work provides a scalable experimental approach for studying how informal social ties modulate the behavioral consequences of hierarchy in human groups.
+
+## Experimental design
+
+![**Figure 1. Experimental design, key measures, and assessment of randomized exposure to rank differences.** (A) Classroom experiment on networked tablets. (B) Friendship nominations and popularity-based Social Rank. (C) Token allocations and the Cooperation GAP. (D) Balance check using centered assigned partner rank.](assets/study-design_20261122.png){width=100% fig-alt="Figure 1 from the current manuscript: classroom experiment, peer nominations and Social Rank, token game and Cooperation GAP, and partner-rank balance check."}
+
+[Download Figure 1 as PDF](assets/study-design_20261122.pdf).
+
+Illustrations by M.O.
+
+## Data and code
+
+The experiment includes 859 children in 45 classrooms from 14 public schools. The raw files contain student records, 17,804 directed allocation decisions, and peer nominations. [Data and measures](main/01_data_and_measures.qmd) defines the variables, explains the null-model filter, and shows how the analysis data are prepared and reused.
+
+Each result page links to its Jupyter notebook and R source in the Code Links menu. Shared calculations come from the R scripts; local notebook chunks inspect tables and display plot objects. The [Main Results index](main/index.qmd) gives the reading order and the command for running only the main analyses.
+
+## Reproduce all results
+
+From the repository root, run:
+
+```sh
+Rscript code/run_all.R
+```
+
+With no argument, `run_all.R` runs the main results and Supporting Information. Tables and figures are written to `output/tables/` and `output/figures/`; supplementary outputs are placed in their `si/` subfolders. For the main results alone, use the [main-only command](main/index.qmd#reproduce-the-main-results).

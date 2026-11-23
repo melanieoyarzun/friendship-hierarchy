@@ -1,0 +1,30 @@
+# Local outputs and session files
+/output/
+/README.html
+/data/generated/
+.quarto/
+.Rproj.user/
+.Rhistory
+.RData
+.DS_Store
+*_files/
+Rplots.pdf
+__pycache__/
+/notebooks/_site/
+/notebooks/_notebook-build/
+/website/_site/
+/data/*.zip
+/data-raw/
+/code/tools/
+/code/01_build_measures.R
+
+# This version includes Supporting Information S1 and S2 only.
+/code/si/*
+!/code/si/S1_study_design.R
+!/code/si/S2_nomination_survey.R
+/notebooks/si/*
+!/notebooks/si/index.qmd
+!/notebooks/si/S1_study_design.qmd
+!/notebooks/si/S1_study_design.ipynb
+!/notebooks/si/S2_nomination_survey.qmd
+!/notebooks/si/S2_nomination_survey.ipynb

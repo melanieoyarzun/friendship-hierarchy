@@ -1,0 +1,174 @@
+---
+title: "4 · Figure 2: classroom networks"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 04_figure2_classroom_networks.ipynb
+  - text: R analysis source
+    icon: file-code
+    href: https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/code/04_figure2_sociograms.R
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/04_figure2_classroom_networks.qmd")
+library(here)
+knitr::read_chunk(here("code", "04_figure2_sociograms.R"))
+```
+
+
+This page draws Figure 2 from the analysis datasets prepared in [Data and measures](01_data_and_measures.qmd), together with the supplied drawing coordinates.
+
+# Four layers of one classroom
+
+
+Figure 2 shows, in one small classroom (9 children), the four networks the analysis combines:
+
+- **A. Friendship**: who named whom as a best friend. Green arrows are mutual friendships; blue arrows are one-sided.
+- **B. Popularity** and **C. non-popularity**: who named whom as popular or as not popular. Social Rank is computed from these two layers.
+- **D. Tokens**: every transfer in the game, darker for more tokens.
+
+The same child keeps the same position in all four layers, so one can follow how a child who is central in one layer fares in the others.
+
+```{r sociogram-packages}
+#| code-summary: "sociogram-packages"
+```
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r sociogram-load}
+#| code-summary: "sociogram-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+```{r sociogram-data}
+#| code-summary: "sociogram-data"
+#| output: false
+```
+
+```{r inspect-classroom}
+#| code-summary: "inspect-classroom"
+tibble(children = nrow(class_students), directed_decisions = nrow(class_dyads))
+```
+
+To draw the four panels, we first fix one position for each child, computed on the network that joins all four layers.
+
+```{r sociogram-layout}
+#| code-summary: "sociogram-layout"
+```
+
+A small function draws one layer; it is called four times.
+
+```{r sociogram-function}
+#| code-summary: "sociogram-function"
+```
+
+Node size is the number of nominations received in A–C and the number of tokens received in D.
+
+```{r sociogram-nodes}
+#| code-summary: "sociogram-nodes"
+```
+
+## A. Friendship nominations
+
+```{r sociogram-panel-a}
+#| code-summary: "sociogram-panel-a"
+```
+
+```{r show-panel-a}
+#| code-summary: "show-panel-a"
+#| code-fold: show
+#| fig-width: 5
+#| fig-height: 3
+panel_a
+```
+
+## B. Popularity nominations
+
+```{r sociogram-panel-b}
+#| code-summary: "sociogram-panel-b"
+```
+
+```{r show-panel-b}
+#| code-summary: "show-panel-b"
+#| code-fold: show
+#| fig-width: 5
+#| fig-height: 3
+panel_b
+```
+
+## C. Non-popularity nominations
+
+```{r sociogram-panel-c}
+#| code-summary: "sociogram-panel-c"
+```
+
+```{r show-panel-c}
+#| code-summary: "show-panel-c"
+#| code-fold: show
+#| fig-width: 5
+#| fig-height: 3
+panel_c
+```
+
+## D. Token transfers
+
+```{r sociogram-panel-d}
+#| code-summary: "sociogram-panel-d"
+```
+
+```{r show-panel-d}
+#| code-summary: "show-panel-d"
+#| code-fold: show
+#| fig-width: 5
+#| fig-height: 3
+panel_d
+```
+
+## The assembled figure
+
+The published figure shows the same four layers as tilted planes stacked on top of each other, with one legend. The node positions are the ones chosen for that drawing (`data/raw/figure2_layout.csv`); they are a drawing choice and play no role in any calculation. Each plane is the layout stretched, flattened and slanted.
+
+```{r sociogram-assembled-layout}
+#| code-summary: "sociogram-assembled-layout"
+```
+
+Nodes and arrows of the four planes. Mutual friendships are drawn once, with two heads.
+
+```{r sociogram-assembled-pieces}
+#| code-summary: "sociogram-assembled-pieces"
+```
+
+```{r sociogram-assembled-legend}
+#| code-summary: "sociogram-assembled-legend"
+```
+
+```{r sociogram-assembled-plot}
+#| code-summary: "sociogram-assembled-plot"
+```
+
+```{r show-figure2-assembled}
+#| code-summary: "show-figure2-assembled"
+#| code-fold: show
+#| fig-width: 5.4
+#| fig-height: 7.2
+figure2_assembled
+```
+
+```{r sociogram-save}
+#| code-summary: "sociogram-save"
+```
+
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+[Continue to Figure 3A: exchange patterns](05_figure3a_exchange_patterns.qmd).

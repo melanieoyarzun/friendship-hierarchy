@@ -1,0 +1,155 @@
+---
+title: "B · Tokens by rank"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 06_figure3b_tokens_by_rank.ipynb
+  - text: R analysis source
+    icon: file-code
+    href: https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/code/05_figure3_cooperation.R
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/06_figure3b_tokens_by_rank.qmd")
+library(here)
+knitr::read_chunk(here("code", "05_figure3_cooperation.R"))
+```
+
+
+[Figure 3 index](figure3_index.qmd) · [Complete assembly](figure3_assembly.qmd#complete-figure-3).
+
+
+Figure 3B shows how mean tokens sent and received vary with the Social Rank GAP. Its input is `data/generated/main/analysis_dyads.csv`, prepared in [Data and measures](01_data_and_measures.qmd). The three relationship groups are non-friends, mutual friends, and sender-declared one-sided friendships.
+
+# Step 1. Summarize each child and relationship group
+
+Every child counts once within each friendship group. `gap` is the median of that child's dyadic `rank_gap` values. `sent` and `received` are the child's mean transfers; `dif_coop` is `received - sent`. These are child-level summaries, rather than new names for the directed-decision variables.
+
+```{r fig3-packages}
+#| code-summary: "fig3-packages"
+```
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r fig3-load}
+#| code-summary: "fig3-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+The next chunks build auxiliary tables for panel B from `analysis_dyads`. `summary_by_child()` calculates the values collected in `children`, and `summary_by_bin()` summarizes them into `binned`. The plotting function uses `binned` for the coordinates, means, and intervals.
+
+```{r binned-data}
+#| code-summary: "binned-data"
+```
+
+```{r child-summary}
+#| output: false
+#| code-summary: "child-summary"
+```
+
+```{r inspect-child-means}
+#| code-summary: "inspect-child-means"
+children %>% filter(group == "Non-friends", version == "Observed") %>% head()
+```
+
+# Step 2. Form seven rank intervals
+
+The children's median rank gaps are split into seven equal-width intervals within each relationship group. `round_gap` identifies the interval; it is unrelated to the recorded game `round`. The horizontal coordinate `median_gap` is the **mean of the children's median rank gaps** in that interval. The columns `mean_sent` and `mean_reci` average the children's mean transfers, giving each child equal weight within the interval.
+
+```{r bin-table}
+#| output: false
+#| code-summary: "bin-table"
+```
+
+The columns prefixed `se_` contain interval half-widths: $1.96\,SD/\sqrt{n}$, with `n` the total number of children in the interval. They already include the factor 1.96. The observed data have valid sent and received means for every child.
+
+# Inspect the observed plotting table
+
+These are the coordinates, mean transfers, and interval half-widths used in the three observed panels below.
+
+```{r inspect-observed-bins}
+#| code-summary: "inspect-observed-bins"
+binned %>%
+  filter(version == "Observed") %>%
+  select(group, round_gap, median_gap, n, mean_sent, mean_reci, se_sent, se_reci)
+```
+
+# Example: draw non-friends directly
+
+First draw one panel from its plotting table with explicit `ggplot()` layers. This example uses the same values, intervals, and styling as the reusable function below.
+
+Rhombi show tokens sent; squares show tokens received. The horizontal dashed line is the overall mean tokens sent across directed decisions. The shaded area separates the two mean curves. Negative Social Rank GAP values mean that the partner has higher rank; positive values mean that the focal child has higher rank.
+
+```{r panel-b-example}
+#| code-summary: "panel-b-example"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-panel-b-example}
+#| code-summary: "show-panel-b-example"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+tokens_non_friends
+```
+
+# The reusable plotting function
+
+The function below packages these same layers so that the relationship group and color can be supplied as arguments.
+
+```{r panel-b-function}
+#| code-summary: "panel-b-function"
+#| code-fold: show
+```
+
+# Mutual friends
+
+```{r tokens-mutual}
+#| code-summary: "tokens-mutual"
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-tokens-mutual}
+#| code-summary: "show-tokens-mutual"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+tokens_mutual
+```
+
+# Sender-declared one-sided friendships
+
+This group views each asymmetric pair from the child who nominated the other. It differs from the folded heatmap in [Figure 3A](05_figure3a_exchange_patterns.qmd), which combines both nomination directions.
+
+```{r tokens-asymmetric}
+#| code-summary: "tokens-asymmetric"
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-tokens-asymmetric}
+#| code-summary: "show-tokens-asymmetric"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+tokens_asymmetric
+```
+
+The full summaries are saved by the command-line replication as `output/tables/figure3_children_summary.csv` and `output/tables/figure3_binned_means.csv`. [Figure 3C](07_figure3c_cooperation_gap.qmd) uses the same construction for the Cooperation GAP and explains how missing filtered values affect its support.
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+[Continue to Figure 3C: Cooperation GAP](07_figure3c_cooperation_gap.qmd).

@@ -1,0 +1,105 @@
+---
+title: "3 · Figure 1D: partner assignment"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 03_figure1_partner_assignment.ipynb
+  - text: R analysis source
+    icon: file-code
+    href: https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/code/03_figure1_balance.R
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/03_figure1_partner_assignment.qmd")
+library(here)
+knitr::read_chunk(here("code", "03_figure1_balance.R"))
+```
+
+
+This page reproduces the balance check in Figure 1D using the two datasets prepared in [Data and measures](01_data_and_measures.qmd). Its outcome is centered assigned partner rank, a different measure from `rank_gap`.
+
+# Was partner rank random?
+
+
+The interpretation of Table 1 rests on random assignment: which classmate a child met in a round should not depend on who the child is. Here we check this for three characteristics of the sender: sex, attendance and grade point average (GPA).
+
+One detail matters. In a given round a child can only be paired with the other children who play in that round. So the benchmark is not the average rank of the whole classroom but the average rank of the *other* active children in that classroom and round. The outcome is the partner's rank minus that benchmark: positive means the child met a partner of higher rank than expected by chance.
+
+```{r balance-packages}
+#| code-summary: "balance-packages"
+```
+
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r balance-load}
+#| code-summary: "balance-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+```{r balance-data}
+#| code-summary: "balance-data"
+```
+
+```{r expected-partner-rank}
+#| code-summary: "expected-partner-rank"
+#| output: false
+```
+
+```{r inspect-partner-rank}
+#| code-summary: "inspect-partner-rank"
+summary(balance_data$partner_rank_demeaned)
+```
+
+We then regress that outcome on the sender's characteristics, with classroom-by-round fixed effects and standard errors clustered by classroom. If assignment is random, all coefficients should be close to zero.
+
+```{r balance-model}
+#| code-summary: "balance-model"
+#| output: false
+```
+
+```{r show-balance-model}
+#| code-summary: "show-balance-model"
+summary(balance_model)
+```
+
+```{r show-balance-table}
+#| code-summary: "show-balance-table"
+balance_table
+```
+
+```{r balance-plot}
+#| code-summary: "balance-plot"
+#| output: false
+#| fig-width: 4
+#| fig-height: 2.8
+```
+
+```{r show-balance-plot}
+#| code-summary: "show-balance-plot"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 2.8
+balance_plot
+```
+
+All three coefficients are close to zero and their confidence intervals include zero; the $R^2$ is about $10^{-6}$. Girls and boys, and children with high or low attendance and grades, met partners of the same expected rank.
+
+```{r balance-save}
+#| code-summary: "balance-save"
+```
+
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+[Continue to Figure 2: classroom networks](04_figure2_classroom_networks.qmd).

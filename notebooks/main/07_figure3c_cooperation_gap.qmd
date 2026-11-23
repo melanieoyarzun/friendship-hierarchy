@@ -1,0 +1,159 @@
+---
+title: "C · Cooperation GAP"
+code-links:
+  - text: Download Jupyter notebook
+    icon: journal-code
+    href: 07_figure3c_cooperation_gap.ipynb
+  - text: R analysis source
+    icon: file-code
+    href: https://github.com/melanieoyarzun/friendship-hierarchy/blob/main/code/05_figure3_cooperation.R
+---
+
+```{r setup}
+#| include: false
+here::i_am("notebooks/main/07_figure3c_cooperation_gap.qmd")
+library(here)
+knitr::read_chunk(here("code", "05_figure3_cooperation.R"))
+```
+
+
+[Figure 3 index](figure3_index.qmd) · [Complete assembly](figure3_assembly.qmd#complete-figure-3).
+
+
+Figure 3C plots the Cooperation GAP against the Social Rank GAP for non-friends, mutual friends, and sender-declared one-sided friendships. Solid curves use observed transfers; semi-transparent curves use null-model-filtered transfers.
+
+# Build the child and interval summaries
+
+For each child and friendship group, the descriptive GAP is mean tokens received minus mean tokens sent. Children are grouped into seven equal-width intervals of their median Social Rank GAP. Each plotted point averages the finite child-level GAPs in its interval. The code below builds these summaries directly from the prepared dyad data, so this page can be run after [Data and measures](01_data_and_measures.qmd) without executing either preceding figure page. The loading step prepares missing inputs automatically.
+
+```{r fig3-packages}
+#| code-summary: "fig3-packages"
+```
+
+The data are reused if `analysis_dyads` and `analysis_students` are already in R. Otherwise, this step loads their CSV files from `data/generated/main/`, or builds them from the raw inputs on first use.
+
+```{r fig3-load}
+#| code-summary: "fig3-load"
+```
+
+```{r show-data-source}
+#| code-summary: "show-data-source"
+main_data_status
+```
+
+The next chunks use `summary_by_child()` and `summary_by_bin()` to build the auxiliary tables `children` and `binned` from `analysis_dyads`. They contain the observed and filtered summaries inspected below. `plot_coop_gap()` uses `binned` to draw the curves.
+
+```{r binned-data}
+#| code-summary: "binned-data"
+```
+
+```{r child-summary}
+#| output: false
+#| code-summary: "child-summary"
+```
+
+```{r bin-table}
+#| output: false
+#| code-summary: "bin-table"
+```
+
+# Observed and filtered support
+
+With observed transfers, every child's sent and received means use the same partners. The mean child-level Cooperation GAP therefore equals the difference between the two mean curves in [Figure 3B](06_figure3b_tokens_by_rank.qmd).
+
+With filtered transfers, each direction uses its own retained allocations. A child may have a sent mean, a received mean, both, or neither. `dif_coop` is finite only when both means exist, and the plotted filtered GAP averages those finite child-level differences. Consequently, the filtered GAP need not equal the difference between separately averaged sent and received curves. This descriptive construction also differs from the filtered regressions, which require both transfers of each pair to be retained.
+
+```{r inspect-filtered-support}
+#| code-summary: "inspect-filtered-support"
+children %>%
+  filter(version == "Filtered") %>%
+  group_by(group) %>%
+  summarise(n_children = n(),
+            n_valid_sent = sum(is.finite(sent)),
+            n_valid_received = sum(is.finite(received)),
+            n_valid_coop_gap = sum(is.finite(dif_coop)),
+            .groups = "drop")
+```
+
+For each interval, `n` counts all children and `n_with_value` counts finite child-level GAPs. The displayed interval half-width `se_dif_coop` is computed as $1.96\,SD/\sqrt{n}$ using the total interval count. The plotting table exposes both counts so that support can be inspected directly.
+
+```{r inspect-gap-support}
+#| code-summary: "inspect-gap-support"
+binned %>%
+  select(group, version, round_gap, median_gap, n, n_with_value, mean_dif_coop, se_dif_coop)
+```
+
+# Example: draw non-friends directly
+
+Draw the observed and filtered curves directly from the non-friend rows, using explicit `ggplot()` layers. The intervals are the same ones reported in the plotting table above.
+
+```{r panel-c-example}
+#| code-summary: "panel-c-example"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-panel-c-example}
+#| code-summary: "show-panel-c-example"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+gap_non_friends
+```
+
+# The reusable plotting function
+
+The function below applies the same plotting instructions to each relationship group. It also allows the vertical limits and the emphasized curve to be specified.
+
+```{r panel-c-function}
+#| code-summary: "panel-c-function"
+#| code-fold: show
+```
+
+# Mutual friends
+
+```{r gap-mutual}
+#| code-summary: "gap-mutual"
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-gap-mutual}
+#| code-summary: "show-gap-mutual"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+gap_mutual
+```
+
+# Sender-declared one-sided friendships
+
+```{r gap-asymmetric}
+#| code-summary: "gap-asymmetric"
+#| fig-width: 4
+#| fig-height: 3.5
+```
+
+```{r show-gap-asymmetric}
+#| code-summary: "show-gap-asymmetric"
+#| code-fold: show
+#| fig-width: 4
+#| fig-height: 3.5
+gap_asymmetric
+```
+
+# Complete Figure 3 {#complete-figure-3}
+
+[Open the complete assembly](figure3_assembly.qmd#complete-figure-3) to see all nine panels, the A–C labels, and the three colored relationship headers.
+
+The [Figure 3 summary dictionary](figure3_index.qmd#figure-3-summary-tables) records the definitions and units of every Figure 3 summary column.
+
+# Session information
+
+```{r session-info}
+#| code-summary: "session-info"
+sessionInfo()
+```
+
+[Continue to the complete Figure 3 assembly](figure3_assembly.qmd).

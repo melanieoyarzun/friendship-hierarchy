@@ -96,7 +96,9 @@ install.packages(c("knitr", "rmarkdown", "jsonlite"))
 | Jupyter notebooks | `quarto render notebooks --profile ipynb --to ipynb` | Open the `.ipynb` files beside their `.qmd` sources. |
 | Publication layout | `python3 website/build_site.py` after rendering | Open `website/_site/index.html`. Requires Python 3.9 or later. |
 
-Run these commands from the repository root. GitHub Actions renders and publishes the same companion website from the default branch. Earlier `/analysis/` page URLs redirect to their corresponding pages in the unified site.
+Run these commands from the repository root. When code, notebooks, or input data are pushed, GitHub Actions runs `Rscript code/run_all.R`, rebuilds the Jupyter downloads and HTML pages, and publishes the companion website from the default branch. The workflow's `replication-results` artifact contains the generated tables and figures and is available for 30 days. Earlier `/analysis/` page URLs redirect to their corresponding pages in the unified site.
+
+The workflow does not create commits. To update the Jupyter files stored in the repository, regenerate them locally before committing; the website downloads are rebuilt during each workflow run.
 
 ## License
 
