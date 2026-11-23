@@ -1,0 +1,860 @@
+student_id,class_id,school_id,grade,female,age,gpa,attendance,attendance_2017,guardian_secondary,guardian_education,repeated_grade,religion
+30,1,1,4,1,10.2,6.1,86.02,88.61,0,1 Primary or less,0,No answer
+68,1,1,4,0,9.6,6.2,98.92,97.47,1,3 Secondary complete,0,No answer
+125,1,1,4,1,10,6.1,80.65,79.75,1,4 Tertiary,0,No answer
+133,1,1,4,1,10.4,5.5,94.62,89.87,1,4 Tertiary,0,No answer
+156,1,1,4,0,10.5,5.3,93.89,98.73,0,1 Primary or less,1,No answer
+161,1,1,4,1,10,6,93.55,92.41,0,2 Secondary incomplete,0,No answer
+224,1,1,4,0,10.1,6.4,89.25,98.73,1,3 Secondary complete,0,No answer
+230,1,1,4,1,10.1,5.3,86.02,87.34,1,3 Secondary complete,0,No answer
+281,1,1,4,0,9.7,6.5,82.8,91.14,0,2 Secondary incomplete,0,No answer
+293,1,1,4,1,10.1,5.9,91.4,68.35,1,3 Secondary complete,0,No answer
+300,1,1,4,1,9.3,6.1,90.32,78.48,0,2 Secondary incomplete,0,No answer
+312,1,1,4,0,10.4,5.3,84.95,92.41,1,3 Secondary complete,1,No answer
+319,1,1,4,1,9.3,5.8,91.4,91.14,0,2 Secondary incomplete,0,No answer
+328,1,1,4,1,10.2,6.3,96.77,98.73,0,2 Secondary incomplete,0,No answer
+345,1,1,4,1,9.7,6.3,94.62,92.41,1,3 Secondary complete,0,No answer
+389,1,1,4,1,9.7,6.3,93.45,96.2,0,2 Secondary incomplete,0,No answer
+433,1,1,4,1,10,6,94.62,98.73,1,3 Secondary complete,0,No answer
+469,1,1,4,1,9.7,6.6,94.62,92.41,1,4 Tertiary,0,No answer
+484,1,1,4,0,9.9,5.6,82.8,82.28,1,3 Secondary complete,0,No answer
+530,1,1,4,1,10.3,6.5,96.77,93.67,1,4 Tertiary,0,No answer
+538,1,1,4,0,10.1,5.8,83.87,70.89,1,3 Secondary complete,0,No answer
+552,1,1,4,0,9.6,5.7,92.47,88.61,1,3 Secondary complete,0,No answer
+567,1,1,4,0,11.1,5.6,77.45,83.54,1,3 Secondary complete,1,No answer
+580,1,1,4,1,10,6.5,52.69,93.67,1,3 Secondary complete,0,No answer
+581,1,1,4,0,9.4,6.5,96.77,92.41,1,4 Tertiary,0,No answer
+598,1,1,4,0,11,5,100,94.94,0,2 Secondary incomplete,1,No answer
+615,1,1,4,1,9.6,5.9,91.4,81.01,1,3 Secondary complete,0,No answer
+621,1,1,4,0,10,5.5,39.78,67.09,1,4 Tertiary,0,No answer
+669,1,1,4,1,9.9,6.2,98.92,97.47,1,3 Secondary complete,0,No answer
+711,1,1,4,1,9.8,6.1,96.77,91.14,1,4 Tertiary,0,No answer
+726,1,1,4,1,9.9,6,97.85,97.47,0,1 Primary or less,0,No answer
+825,1,1,4,0,9.4,5.7,94.62,96.2,1,3 Secondary complete,0,No answer
+859,1,1,4,0,10,6.4,89.25,84.81,1,3 Secondary complete,0,No answer
+11,2,2,3,1,10.6,5.4,100,97.5,1,3 Secondary complete,1,Evangelical
+23,2,2,3,0,8.5,6.2,90,75.63,1,3 Secondary complete,0,Evangelical
+48,2,2,3,0,8.8,6.6,91,93.75,1,4 Tertiary,0,Evangelical
+92,2,2,3,0,9,6.2,96,88.75,0,1 Primary or less,0,Evangelical
+102,2,2,3,0,8.9,5.3,93,91.88,0,2 Secondary incomplete,0,Evangelical
+145,2,2,3,0,9.4,6.7,100,95,0,1 Primary or less,0,Catholic
+146,2,2,3,0,9.2,6,91,88.75,1,4 Tertiary,0,Evangelical
+178,2,2,3,1,8.4,6,84,89.38,0,2 Secondary incomplete,0,Catholic
+242,2,2,3,0,9.2,6.2,91,87.5,1,3 Secondary complete,0,Evangelical
+258,2,2,3,0,8.8,6.4,95,83.75,1,3 Secondary complete,0,Evangelical
+290,2,2,3,0,9.4,6.3,93,83.75,1,4 Tertiary,0,Evangelical
+306,2,2,3,1,8.6,6,94,91.88,1,3 Secondary complete,0,Evangelical
+330,2,2,3,0,9.1,6.1,95,94.38,1,3 Secondary complete,0,Evangelical
+334,2,2,3,1,9,6.3,95,91.88,1,3 Secondary complete,0,Evangelical
+468,2,2,3,0,8.4,5.4,96,93.75,0,1 Primary or less,0,Catholic
+558,2,2,3,1,9.1,5.4,96,94.38,1,3 Secondary complete,0,Catholic
+582,2,2,3,0,9,6.6,96,100,1,3 Secondary complete,0,Catholic
+597,2,2,3,1,8.8,6.8,98,90,1,3 Secondary complete,0,Evangelical
+654,2,2,3,0,9.4,6.8,98,98.13,1,4 Tertiary,0,Catholic
+724,2,2,3,1,9,5.4,96,99.38,1,4 Tertiary,0,Evangelical
+730,2,2,3,0,9.2,4.7,83,100,0,1 Primary or less,0,Evangelical
+757,2,2,3,1,8.5,5.6,94,86.88,0,2 Secondary incomplete,0,Evangelical
+760,2,2,3,1,8.5,6.1,98,95,1,3 Secondary complete,0,Evangelical
+762,2,2,3,1,9.5,6,96,94.38,0,1 Primary or less,0,Evangelical
+42,3,2,4,0,10.1,6.1,82,94.81,1,3 Secondary complete,0,Catholic
+86,3,2,4,1,9.7,6.8,90,85.06,1,4 Tertiary,0,Catholic
+116,3,2,4,1,9.6,5.8,95,85.71,1,3 Secondary complete,0,Catholic
+136,3,2,4,1,9.7,6.1,72,85.71,1,3 Secondary complete,0,Evangelical
+202,3,2,4,1,9.9,5.9,93,98.05,1,3 Secondary complete,0,Catholic
+234,3,2,4,1,9.7,5.8,82,75.97,0,1 Primary or less,0,Evangelical
+287,3,2,4,0,10.6,5.7,82,94.81,1,3 Secondary complete,0,Catholic
+310,3,2,4,0,10,6.8,94,91.56,1,3 Secondary complete,0,Catholic
+369,3,2,4,0,10,5.3,84,78.57,0,1 Primary or less,0,Evangelical
+380,3,2,4,1,9.4,6.3,88,98.05,1,4 Tertiary,0,Catholic
+445,3,2,4,1,10.6,5.4,91,93.51,1,3 Secondary complete,0,Catholic
+466,3,2,4,0,10.8,6.1,89,96.75,0,1 Primary or less,0,Evangelical
+482,3,2,4,1,9.7,6.6,94,96.1,1,3 Secondary complete,0,Catholic
+512,3,2,4,0,9.5,5.8,99,95.45,1,3 Secondary complete,0,Catholic
+526,3,2,4,1,10.1,6.1,95,90.91,0,1 Primary or less,0,Evangelical
+531,3,2,4,0,9.8,5.2,71,78.57,1,3 Secondary complete,0,Evangelical
+544,3,2,4,1,9.5,6.6,95,94.16,1,3 Secondary complete,0,Catholic
+575,3,2,4,1,11.2,5.4,93,97.4,1,4 Tertiary,1,Catholic
+579,3,2,4,1,10.3,6.7,89,90.91,1,4 Tertiary,0,Evangelical
+605,3,2,4,0,10.4,5,93,89.61,1,3 Secondary complete,1,No answer
+612,3,2,4,0,9.8,5.4,90,84.42,0,1 Primary or less,0,Evangelical
+613,3,2,4,0,9.9,5.9,91,96.16,1,4 Tertiary,0,Catholic
+631,3,2,4,0,10.1,5.5,66,82.47,0,2 Secondary incomplete,0,Catholic
+652,3,2,4,1,9.7,6.5,94,94.16,1,3 Secondary complete,0,Catholic
+683,3,2,4,1,10.4,6.3,93,98.05,1,3 Secondary complete,1,Catholic
+691,3,2,4,1,9.7,6.2,76,94.81,1,3 Secondary complete,0,Catholic
+716,3,2,4,0,8.8,5.5,86,76.62,0,2 Secondary incomplete,0,No answer
+750,3,2,4,0,9.8,5,91,93.51,1,3 Secondary complete,1,Catholic
+774,3,2,4,0,9.7,5.7,94,89.61,1,3 Secondary complete,0,Catholic
+801,3,2,4,1,9.7,5.9,84,85.71,1,3 Secondary complete,0,Catholic
+25,4,2,5,0,10.5,6.1,86,89.61,1,3 Secondary complete,0,Catholic
+67,4,2,5,1,10.4,5.8,98,92.21,1,3 Secondary complete,0,Evangelical
+158,4,2,5,1,8.7,5.8,94,92.86,1,3 Secondary complete,0,Evangelical
+167,4,2,5,0,11.6,6.7,99,99.35,1,3 Secondary complete,0,Catholic
+201,4,2,5,1,10.6,6.3,92,79.87,1,4 Tertiary,0,Catholic
+286,4,2,5,1,10.8,6.4,84,87.66,0,1 Primary or less,0,Evangelical
+420,4,2,5,1,10.5,5.7,85,89.61,0,2 Secondary incomplete,0,Evangelical
+430,4,2,5,0,11.3,5.5,72,82.47,0,1 Primary or less,0,Evangelical
+459,4,2,5,0,11.1,5.3,90,94.81,1,3 Secondary complete,0,Catholic
+480,4,2,5,1,10.3,6.2,94,90.26,1,3 Secondary complete,0,Catholic
+504,4,2,5,0,11.6,5.8,76,75.32,1,4 Tertiary,0,Catholic
+561,4,2,5,1,10.2,6,86,83.77,0,2 Secondary incomplete,0,Evangelical
+562,4,2,5,0,11.5,5.5,81,83.77,0,2 Secondary incomplete,1,Catholic
+565,4,2,5,0,10.9,5.8,86,91.56,1,3 Secondary complete,0,No answer
+573,4,2,5,1,10.5,5.9,99,96.1,1,3 Secondary complete,0,Evangelical
+648,4,2,5,0,10.8,5.8,93,94.81,1,4 Tertiary,0,Catholic
+670,4,2,5,0,10.5,5.7,91,92.86,1,3 Secondary complete,0,Catholic
+690,4,2,5,0,11.3,5.7,89,93.51,0,2 Secondary incomplete,0,Catholic
+701,4,2,5,0,10.7,6.3,95,98.05,1,3 Secondary complete,0,Evangelical
+718,4,2,5,0,11.9,5.3,88,83.77,1,3 Secondary complete,0,Evangelical
+728,4,2,5,1,10.6,5.8,92,93.51,0,1 Primary or less,0,Evangelical
+754,4,2,5,1,11.7,5.5,85,77.92,1,3 Secondary complete,0,Catholic
+852,4,2,5,0,10.7,5.8,98,87.66,1,3 Secondary complete,0,Catholic
+2,5,3,3,0,9.1,6.4,96,91.72,0,1 Primary or less,NA,Evangelical
+87,5,3,3,0,8.3,5.4,84,87.57,1,3 Secondary complete,NA,Catholic
+236,5,3,3,0,8.3,5.4,96,94.67,1,4 Tertiary,NA,Catholic
+329,5,3,3,1,9.3,6.5,94,93.49,0,2 Secondary incomplete,NA,Evangelical
+331,5,3,3,0,11.5,4.4,72,79.29,1,3 Secondary complete,NA,Evangelical
+375,5,3,3,1,8.7,6.4,97,91.12,0,2 Secondary incomplete,NA,Catholic
+392,5,3,3,1,9,6.1,93,97.04,1,3 Secondary complete,NA,Evangelical
+402,5,3,3,1,8.3,5.5,86,87.57,0,2 Secondary incomplete,NA,Evangelical
+478,5,3,3,0,8.6,5.7,91,86.39,1,4 Tertiary,NA,Catholic
+548,5,3,3,0,8.6,5.5,86,88.76,1,3 Secondary complete,NA,Evangelical
+677,5,3,3,0,9.2,6.3,91,87.57,0,2 Secondary incomplete,NA,Evangelical
+766,5,3,3,0,10,5,85,84.62,0,1 Primary or less,NA,Evangelical
+784,5,3,3,0,10.6,4.9,90,89.35,0,1 Primary or less,NA,Catholic
+88,6,3,3,1,10.2,4.6,90,97.63,0,1 Primary or less,NA,No answer
+101,6,3,3,1,9.2,6.7,98,98.82,1,3 Secondary complete,NA,Evangelical
+144,6,3,3,0,10.6,5.2,90,88.76,0,1 Primary or less,NA,Evangelical
+297,6,3,3,0,10.4,4.2,90,91.72,1,3 Secondary complete,NA,Catholic
+309,6,3,3,0,9.6,4.7,88,97.04,0,2 Secondary incomplete,NA,Catholic
+387,6,3,3,0,8.7,5.3,85,86.98,0,1 Primary or less,NA,Evangelical
+408,6,3,3,1,9,5.4,86,91.72,0,2 Secondary incomplete,NA,Catholic
+489,6,3,3,1,8.6,6.4,94,95.86,0,1 Primary or less,NA,Catholic
+514,6,3,3,1,8.7,6.3,96,96.45,1,3 Secondary complete,NA,Evangelical
+547,6,3,3,0,8.6,6.2,82,92.9,1,3 Secondary complete,NA,Catholic
+627,6,3,3,0,8.8,6.3,92,97.63,1,3 Secondary complete,NA,Catholic
+650,6,3,3,0,9,5.5,88,90.53,1,3 Secondary complete,NA,Catholic
+712,6,3,3,1,8.3,6.2,86,95.27,1,3 Secondary complete,NA,Evangelical
+715,6,3,3,1,8.6,5.2,86,94.08,1,3 Secondary complete,NA,Catholic
+798,6,3,3,1,8.5,6.1,96,89.94,0,2 Secondary incomplete,NA,Evangelical
+823,6,3,3,1,8.2,5.7,83,87.57,0,2 Secondary incomplete,NA,Catholic
+22,7,3,4,0,9.4,5.4,90,96.45,0,1 Primary or less,NA,Catholic
+28,7,3,4,1,10.1,5.9,95,82.82,0,1 Primary or less,NA,Evangelical
+43,7,3,4,0,9.7,6.1,85,91.72,1,4 Tertiary,NA,Evangelical
+65,7,3,4,1,9.8,5.9,97,95.27,1,3 Secondary complete,NA,Evangelical
+143,7,3,4,1,9.9,5.8,90,88.76,0,1 Primary or less,NA,Catholic
+153,7,3,4,0,10.3,6.2,96,97.04,1,3 Secondary complete,NA,Catholic
+177,7,3,4,0,11.1,4.9,68,69.23,0,1 Primary or less,NA,Evangelical
+237,7,3,4,1,10.1,5.2,94,92.9,1,3 Secondary complete,NA,Evangelical
+245,7,3,4,0,12.3,5.7,88,82.84,0,1 Primary or less,NA,Catholic
+294,7,3,4,0,10.2,6.2,90,94.08,0,1 Primary or less,NA,Evangelical
+332,7,3,4,0,9.7,6.1,96,98.82,0,1 Primary or less,NA,Catholic
+379,7,3,4,0,9.6,5.3,97,93.49,1,3 Secondary complete,NA,Evangelical
+381,7,3,4,1,10.1,6.3,97,97.63,1,3 Secondary complete,NA,Evangelical
+391,7,3,4,0,10.2,5.1,95,98.22,0,2 Secondary incomplete,NA,Catholic
+511,7,3,4,0,10,6.7,98,99.41,1,3 Secondary complete,NA,Catholic
+513,7,3,4,0,10.5,5,92,90.53,1,3 Secondary complete,NA,Evangelical
+549,7,3,4,0,10.6,5.7,86,84.02,0,2 Secondary incomplete,NA,Evangelical
+570,7,3,4,0,9.5,6.4,73,84.78,1,3 Secondary complete,NA,Catholic
+572,7,3,4,0,13.3,5.1,97,96.45,1,4 Tertiary,NA,No answer
+644,7,3,4,1,10.5,5.4,62,92.31,0,2 Secondary incomplete,NA,Evangelical
+756,7,3,4,1,9.9,6,68,86.98,0,2 Secondary incomplete,NA,Catholic
+848,7,3,4,1,10.4,5.3,89,92.9,0,1 Primary or less,NA,Catholic
+856,7,3,4,1,9.8,6.7,97,99.41,0,1 Primary or less,NA,Evangelical
+5,8,3,5,0,10.7,5.5,89,92.31,0,2 Secondary incomplete,NA,Evangelical
+205,8,3,5,1,10.4,5.8,92,98.82,1,4 Tertiary,NA,Catholic
+244,8,3,5,1,10.3,6.2,92,85.21,1,3 Secondary complete,NA,No answer
+251,8,3,5,0,11.3,5.1,85,92.31,1,3 Secondary complete,NA,Evangelical
+267,8,3,5,0,11.3,5.7,91,98.22,1,3 Secondary complete,NA,Evangelical
+322,8,3,5,1,10.4,5.3,84,90.53,1,3 Secondary complete,NA,Evangelical
+405,8,3,5,1,11.2,6.5,96,97.04,1,3 Secondary complete,NA,Evangelical
+414,8,3,5,0,12,5.4,98,98.22,0,1 Primary or less,NA,Catholic
+421,8,3,5,0,10.9,6.2,97,93.49,1,3 Secondary complete,NA,Catholic
+486,8,3,5,0,10.5,5.6,88,89.94,0,1 Primary or less,NA,Evangelical
+509,8,3,5,0,11.3,6.5,96,99.41,0,1 Primary or less,NA,Evangelical
+610,8,3,5,1,10.7,6.1,90,95.86,1,3 Secondary complete,NA,Evangelical
+614,8,3,5,0,11.5,5.5,81,86.98,0,1 Primary or less,NA,Catholic
+655,8,3,5,0,10.6,5.8,84,88.17,0,1 Primary or less,NA,Evangelical
+659,8,3,5,0,10.4,5.3,92,95.86,1,3 Secondary complete,NA,Catholic
+721,8,3,5,1,11.4,5.5,80,95.27,0,1 Primary or less,NA,Catholic
+796,8,3,5,0,12.6,5.3,91,94.08,1,3 Secondary complete,NA,Evangelical
+854,8,3,5,0,10.3,6,97,94.08,1,4 Tertiary,NA,No answer
+66,9,3,5,0,13.9,4.7,91,96.45,1,3 Secondary complete,NA,Catholic
+174,9,3,5,0,11.5,5.3,93,94.08,1,3 Secondary complete,NA,Catholic
+179,9,3,5,1,10.4,5.3,90,89.35,1,3 Secondary complete,NA,Catholic
+196,9,3,5,0,11.5,4.9,81,82.25,1,4 Tertiary,NA,Evangelical
+260,9,3,5,1,12.1,5.5,88,94.67,1,3 Secondary complete,NA,Catholic
+336,9,3,5,0,14.1,4.4,74,71.6,0,1 Primary or less,NA,Evangelical
+351,9,3,5,1,10.5,5.3,93,93.49,0,1 Primary or less,NA,No answer
+352,9,3,5,0,10.6,4.9,97,96.45,0,2 Secondary incomplete,NA,Catholic
+396,9,3,5,1,13.4,5.2,80,86.39,0,2 Secondary incomplete,NA,Catholic
+446,9,3,5,0,10.7,4.9,83,88.17,1,4 Tertiary,NA,Evangelical
+460,9,3,5,1,11.3,5,88,86.39,1,3 Secondary complete,NA,Catholic
+510,9,3,5,1,11.2,5.7,85,89.94,1,3 Secondary complete,NA,Catholic
+522,9,3,5,1,10.9,5.5,93,62.72,0,2 Secondary incomplete,NA,Evangelical
+523,9,3,5,0,10.5,5.5,91,89.94,1,3 Secondary complete,NA,Catholic
+586,9,3,5,1,11.4,5.8,94,99.41,1,3 Secondary complete,NA,Catholic
+699,9,3,5,0,12.3,4.8,89,91.12,0,1 Primary or less,NA,No answer
+767,9,3,5,0,10.6,4.6,93,95.27,0,2 Secondary incomplete,NA,No answer
+793,9,3,5,1,11.1,5.3,92,94.67,1,3 Secondary complete,NA,Catholic
+840,9,3,5,1,10.5,5.5,83,86.98,1,3 Secondary complete,NA,Catholic
+51,10,4,3,1,9.2,6.1,90.8,87.22,0,2 Secondary incomplete,0,Catholic
+162,10,4,3,0,8.4,5.7,98.34,89.44,1,3 Secondary complete,0,Evangelical
+247,10,4,3,1,8.9,7,93.92,98.89,1,3 Secondary complete,0,Catholic
+393,10,4,3,0,9.7,5.2,95.03,96.67,1,3 Secondary complete,0,Catholic
+751,10,4,3,1,8.6,5.4,97.24,96.11,0,1 Primary or less,0,Evangelical
+786,10,4,3,0,9.4,5.7,99.45,98.89,0,1 Primary or less,0,Evangelical
+811,10,4,3,0,8.7,7,97.79,96.67,1,3 Secondary complete,0,Catholic
+837,10,4,3,0,9.6,5.8,97.79,92.78,1,4 Tertiary,1,Catholic
+110,11,4,4,0,11.1,5.4,98.9,93.33,0,2 Secondary incomplete,1,Evangelical
+203,11,4,4,1,9.3,6.3,95.03,97.22,0,2 Secondary incomplete,0,Evangelical
+277,11,4,4,0,9.3,6.5,100,100,1,3 Secondary complete,0,Evangelical
+315,11,4,4,1,9.7,5.9,99.45,98.33,0,1 Primary or less,0,Evangelical
+692,11,4,4,0,9.3,5.5,100,98.33,0,2 Secondary incomplete,0,Evangelical
+732,11,4,4,1,9.4,6.4,99.29,98.33,0,2 Secondary incomplete,0,No answer
+745,11,4,4,0,11.1,6.3,99.45,96.67,1,3 Secondary complete,0,Evangelical
+9,12,4,5,0,10.4,6.6,97.79,98.36,1,3 Secondary complete,0,Evangelical
+27,12,4,5,0,10.5,6.3,99.45,100,0,1 Primary or less,0,Evangelical
+126,12,4,5,1,11.7,5.5,62.22,54.64,0,2 Secondary incomplete,1,Evangelical
+135,12,4,5,1,9.8,5.5,67.96,69.95,0,1 Primary or less,0,Evangelical
+194,12,4,5,0,11.1,6.6,95.03,89.07,0,1 Primary or less,0,Evangelical
+210,12,4,5,0,11.4,6.2,92.82,89.62,1,3 Secondary complete,0,Evangelical
+215,12,4,5,1,10.8,5.8,82.32,92.9,0,1 Primary or less,0,Evangelical
+231,12,4,5,1,10.3,5.5,88.51,80.33,1,3 Secondary complete,0,Evangelical
+249,12,4,5,0,10.5,6.6,83.43,84.15,1,3 Secondary complete,0,Catholic
+270,12,4,5,1,10.2,6.4,85.64,95.63,0,2 Secondary incomplete,0,Evangelical
+341,12,4,5,0,12.2,5.9,88.95,82.51,1,3 Secondary complete,1,Evangelical
+348,12,4,5,1,10.8,5.8,82.32,91.26,0,1 Primary or less,0,Evangelical
+354,12,4,5,1,10.6,6.8,96.69,96.72,1,3 Secondary complete,0,Evangelical
+472,12,4,5,0,11,5.9,81.77,86.34,0,2 Secondary incomplete,0,Evangelical
+566,12,4,5,1,10.5,6.4,91.16,96.17,0,1 Primary or less,0,Evangelical
+591,12,4,5,0,11.8,5.5,81.22,96.17,0,1 Primary or less,1,Catholic
+660,12,4,5,0,10.5,5.9,90.06,97.27,0,1 Primary or less,0,Evangelical
+672,12,4,5,0,11.7,5.9,74.3,98.1,1,3 Secondary complete,1,No answer
+682,12,4,5,1,10.8,6.9,93.37,98.91,1,3 Secondary complete,0,Evangelical
+729,12,4,5,0,11.4,5,79.56,71.58,0,1 Primary or less,1,Evangelical
+779,12,4,5,0,11.1,6.2,87.85,97.81,0,1 Primary or less,0,Evangelical
+39,13,5,4,0,11,6.2,95,95.95,0,2 Secondary incomplete,NA,No answer
+83,13,5,4,1,10.6,6.5,85,91.33,0,2 Secondary incomplete,NA,Catholic
+85,13,5,4,0,10.1,6.6,83,87.86,1,4 Tertiary,NA,Catholic
+121,13,5,4,1,9.4,6.3,76,83.82,1,3 Secondary complete,NA,Catholic
+163,13,5,4,0,11.4,6.7,93,95.38,1,3 Secondary complete,NA,Catholic
+166,13,5,4,0,9.4,6.6,86,95.38,0,1 Primary or less,NA,Catholic
+186,13,5,4,1,9.6,6.9,98,98.27,1,3 Secondary complete,NA,Evangelical
+225,13,5,4,1,9.5,6.7,87,82.66,0,1 Primary or less,NA,No answer
+366,13,5,4,0,9.6,6.3,80,76.3,1,3 Secondary complete,NA,Catholic
+427,13,5,4,1,9.3,6.8,89,91.33,0,2 Secondary incomplete,NA,Catholic
+434,13,5,4,0,10.2,6.4,78,87.86,0,1 Primary or less,NA,Catholic
+449,13,5,4,1,10.5,6.6,80,84.97,0,1 Primary or less,NA,Catholic
+608,13,5,4,0,10.8,5.8,87,89.02,0,2 Secondary incomplete,NA,Evangelical
+630,13,5,4,1,9.8,6.7,81,95.38,0,2 Secondary incomplete,NA,Evangelical
+720,13,5,4,1,9.4,6.8,96,96.53,1,4 Tertiary,NA,Evangelical
+783,13,5,4,1,10.1,6.6,87,94.22,0,2 Secondary incomplete,NA,Catholic
+807,13,5,4,1,10.3,6.4,96,94.22,0,2 Secondary incomplete,NA,Evangelical
+819,13,5,4,1,9.6,6.7,96,93.64,0,2 Secondary incomplete,NA,Catholic
+821,13,5,4,0,9.8,6.9,94,91.33,1,3 Secondary complete,NA,Evangelical
+829,13,5,4,0,9.9,6.6,83,80.92,1,3 Secondary complete,NA,Catholic
+19,14,5,4,0,10.2,6.3,91,85,0,2 Secondary incomplete,0,Catholic
+40,14,5,4,1,10.7,4.8,77,86.47,0,2 Secondary incomplete,0,Evangelical
+41,14,5,4,0,9.7,5.2,96.61,85,1,4 Tertiary,0,Catholic
+73,14,5,4,1,10.7,6.5,85,85.88,1,3 Secondary complete,0,Evangelical
+139,14,5,4,1,10.4,4.5,64,85,0,2 Secondary incomplete,0,Evangelical
+180,14,5,4,0,10.1,6.6,93,97.06,0,1 Primary or less,0,Evangelical
+200,14,5,4,0,10.4,6.3,88,88.24,0,1 Primary or less,0,No answer
+248,14,5,4,1,11.2,6.4,93,93.53,0,1 Primary or less,0,Catholic
+284,14,5,4,0,10,4.5,84.18,96.47,1,3 Secondary complete,0,Evangelical
+327,14,5,4,1,9.6,6.9,95,91.76,1,3 Secondary complete,0,Evangelical
+395,14,5,4,1,10.8,5.8,87,97.65,1,3 Secondary complete,0,Catholic
+426,14,5,4,0,10,4.8,68,85,0,1 Primary or less,0,Evangelical
+462,14,5,4,1,9.5,6.4,91,97.06,0,1 Primary or less,0,Evangelical
+555,14,5,4,0,9.5,6.4,85,88.24,0,1 Primary or less,0,No answer
+777,14,5,4,1,9.3,6.1,98,98.82,1,3 Secondary complete,0,Catholic
+830,14,5,4,1,9.2,6.9,97,98.24,1,4 Tertiary,0,Catholic
+835,14,5,4,1,9.6,6.8,91,87.65,1,3 Secondary complete,0,Catholic
+3,15,5,5,0,11.2,5.5,88,92.94,0,1 Primary or less,NA,Catholic
+17,15,5,5,0,10.7,5.6,81,87.06,0,2 Secondary incomplete,NA,Catholic
+24,15,5,5,1,11,6.6,98,100,0,1 Primary or less,NA,Evangelical
+58,15,5,5,1,10.7,5.9,96,90.59,0,1 Primary or less,NA,Evangelical
+97,15,5,5,1,10.3,6.5,90,90,0,2 Secondary incomplete,NA,Evangelical
+113,15,5,5,0,10.5,5.6,87,90,1,3 Secondary complete,NA,Evangelical
+127,15,5,5,1,11.6,4.8,98,100,1,3 Secondary complete,NA,Evangelical
+151,15,5,5,0,11.6,5.6,92,91.76,0,1 Primary or less,NA,Catholic
+171,15,5,5,1,10.2,6,87,98.82,1,4 Tertiary,NA,Evangelical
+189,15,5,5,1,10.9,6.1,92,98.24,1,3 Secondary complete,NA,Evangelical
+199,15,5,5,1,12.7,5.5,82,95.88,0,1 Primary or less,NA,Catholic
+388,15,5,5,0,11,6.5,98,100,1,3 Secondary complete,NA,Catholic
+399,15,5,5,0,11.1,6.4,88,95.29,0,1 Primary or less,NA,Catholic
+439,15,5,5,0,10.7,5.6,86,92.94,0,2 Secondary incomplete,NA,Catholic
+451,15,5,5,0,10.9,5.2,2,87.06,0,2 Secondary incomplete,NA,Evangelical
+487,15,5,5,1,10.5,5.1,68,85.29,0,1 Primary or less,NA,Catholic
+490,15,5,5,0,11.2,5.4,94,96.47,0,2 Secondary incomplete,NA,Catholic
+607,15,5,5,1,10.9,5.6,91,95.29,0,1 Primary or less,NA,Catholic
+619,15,5,5,1,10.9,5.5,95,97.06,1,3 Secondary complete,NA,Evangelical
+668,15,5,5,0,11.4,5.4,97,94.12,0,1 Primary or less,NA,No answer
+714,15,5,5,1,11.1,5.9,86,77.06,1,3 Secondary complete,NA,Catholic
+723,15,5,5,1,11,6.7,96,96.47,1,4 Tertiary,NA,Catholic
+773,15,5,5,0,10.7,6.7,93,97.65,1,3 Secondary complete,NA,Catholic
+817,15,5,5,0,12.4,5,84,92.94,0,1 Primary or less,NA,Evangelical
+820,15,5,5,1,11.2,5.6,96,97.06,0,1 Primary or less,NA,Evangelical
+833,15,5,5,0,10.3,6.1,94,96.47,0,2 Secondary incomplete,NA,Catholic
+176,16,6,3,1,10,4.4,87,98,0,1 Primary or less,1,Evangelical
+257,16,6,3,0,10.9,6.3,98,99,1,4 Tertiary,1,Evangelical
+305,16,6,3,1,9.9,4.6,73,90,1,3 Secondary complete,1,Evangelical
+505,16,6,3,1,9.2,6.4,85,92,1,3 Secondary complete,0,Catholic
+546,16,6,3,1,8.7,6.4,96,98,0,1 Primary or less,0,Catholic
+657,16,6,3,0,9,6.6,98,100,0,1 Primary or less,0,Catholic
+662,16,6,3,0,8.5,6.1,93,97,1,3 Secondary complete,0,Catholic
+687,16,6,3,1,8.7,6.5,95,92,1,3 Secondary complete,0,Evangelical
+808,16,6,3,1,9.5,5.5,75,62,1,3 Secondary complete,0,Catholic
+188,17,6,4,0,10.6,4.5,90,66,1,3 Secondary complete,NA,Catholic
+361,17,6,4,0,10.8,5.3,95,85,0,1 Primary or less,0,No answer
+525,17,6,4,0,9.9,5.4,86,87,1,3 Secondary complete,0,Evangelical
+532,17,6,4,0,10.9,4.5,70,73,0,1 Primary or less,1,Evangelical
+623,17,6,4,0,9.4,5.8,90,94,1,3 Secondary complete,0,Catholic
+674,17,6,4,1,9.4,6.6,88,87,1,3 Secondary complete,0,Catholic
+706,17,6,4,1,9.7,5.5,80,90,0,2 Secondary incomplete,0,Catholic
+709,17,6,4,1,12,5.6,97,98,0,2 Secondary incomplete,0,Catholic
+742,17,6,4,0,10.1,5.9,98,99,1,3 Secondary complete,0,Catholic
+749,17,6,4,0,9.6,5.3,93,83,0,1 Primary or less,0,Catholic
+839,17,6,4,0,10.1,5.6,98,99,1,3 Secondary complete,0,Evangelical
+847,17,6,4,1,10,6.2,98,99,0,1 Primary or less,0,Catholic
+45,18,6,5,1,11.2,6.2,73,90,1,3 Secondary complete,0,Catholic
+107,18,6,5,1,10.6,5.2,88,88,1,3 Secondary complete,0,Catholic
+112,18,6,5,0,12.1,4.5,65,87,1,4 Tertiary,1,No answer
+124,18,6,5,0,10.3,5.6,86,96,1,4 Tertiary,0,Evangelical
+246,18,6,5,1,11.2,6.3,89,85,0,1 Primary or less,0,Catholic
+252,18,6,5,0,20.8,6.6,91,87,1,4 Tertiary,0,No answer
+268,18,6,5,0,10.6,6.1,95,99,1,3 Secondary complete,0,Evangelical
+308,18,6,5,1,11.2,6.3,87,96,1,3 Secondary complete,0,No answer
+350,18,6,5,0,11.2,6.1,89,80,1,4 Tertiary,0,No answer
+458,18,6,5,0,11.3,5.5,93,89,1,3 Secondary complete,0,No answer
+503,18,6,5,0,11.3,6,97,97,0,2 Secondary incomplete,0,No answer
+589,18,6,5,0,11.5,4,81,89,0,2 Secondary incomplete,1,Catholic
+689,18,6,5,0,10.3,6.6,100,84,1,3 Secondary complete,1,No answer
+804,18,6,5,1,10.6,6.3,97,88,1,3 Secondary complete,0,Evangelical
+69,19,7,3,1,9.7,6,97,96.21,0,1 Primary or less,1,Catholic
+123,19,7,3,1,8.4,5.5,93,100,0,1 Primary or less,0,Evangelical
+181,19,7,3,0,8.6,6.1,89,97.73,0,2 Secondary incomplete,0,Evangelical
+183,19,7,3,0,8.9,5.9,97,96.21,0,1 Primary or less,0,Evangelical
+221,19,7,3,1,10,6.2,80,85,1,3 Secondary complete,0,Evangelical
+227,19,7,3,1,8.9,6.4,100,96.21,0,1 Primary or less,0,Catholic
+229,19,7,3,1,9.8,5.7,84,95.45,0,1 Primary or less,1,No answer
+264,19,7,3,1,8.4,6.4,93,96.97,1,3 Secondary complete,0,Catholic
+320,19,7,3,1,9,6.6,96,98.48,1,3 Secondary complete,0,Catholic
+560,19,7,3,1,9,6.6,96,99.24,0,1 Primary or less,0,Catholic
+595,19,7,3,1,9.1,5.5,84,85,0,1 Primary or less,0,Catholic
+604,19,7,3,1,8.5,5.8,79,93.18,0,2 Secondary incomplete,0,Catholic
+626,19,7,3,0,8.6,6.5,86,97.73,0,2 Secondary incomplete,0,Catholic
+636,19,7,3,1,8.7,6.8,98,90.91,1,3 Secondary complete,0,Evangelical
+698,19,7,3,0,9.1,5.4,96,99.24,0,1 Primary or less,0,Evangelical
+71,20,7,4,1,9.8,5.7,94,98.48,1,3 Secondary complete,0,Evangelical
+82,20,7,4,1,10.2,5.5,83,99.24,0,2 Secondary incomplete,1,Catholic
+99,20,7,4,1,10,6.7,100,96.97,0,1 Primary or less,0,Evangelical
+134,20,7,4,0,10.4,5.6,82,96.21,0,1 Primary or less,0,Catholic
+195,20,7,4,1,10.6,5.8,92,99.24,0,1 Primary or less,0,Evangelical
+216,20,7,4,1,10.1,6,84,96.21,0,1 Primary or less,0,Evangelical
+228,20,7,4,0,9.8,5.6,92,93.94,1,3 Secondary complete,0,Catholic
+266,20,7,4,0,10,6.3,85,99.24,1,3 Secondary complete,0,Catholic
+272,20,7,4,0,10.1,6.5,84,98.48,1,4 Tertiary,0,Evangelical
+339,20,7,4,1,9.6,6.2,98,100,0,1 Primary or less,0,Evangelical
+398,20,7,4,0,9.9,6.5,72,90.91,0,2 Secondary incomplete,0,Catholic
+431,20,7,4,0,11,5.1,85,85,0,1 Primary or less,1,Evangelical
+496,20,7,4,0,9.3,5.6,64,97.73,0,2 Secondary incomplete,0,Catholic
+501,20,7,4,1,10,6.7,100,100,1,3 Secondary complete,0,Evangelical
+653,20,7,4,1,9.6,6.6,100,100,1,3 Secondary complete,0,Evangelical
+713,20,7,4,1,10.7,5.4,75,85,0,1 Primary or less,0,Evangelical
+717,20,7,4,0,9.7,6.9,93,99.24,1,3 Secondary complete,0,Evangelical
+752,20,7,4,0,7.7,5.5,62,85,1,3 Secondary complete,0,Catholic
+805,20,7,4,0,10.8,5.6,68,84.85,0,2 Secondary incomplete,0,Catholic
+827,20,7,4,0,12,5.7,83,98.48,0,1 Primary or less,1,Evangelical
+853,20,7,4,1,9.9,6,89,97.73,0,2 Secondary incomplete,0,Catholic
+120,21,7,5,0,11.8,5.6,78,93.1,0,1 Primary or less,0,Catholic
+169,21,7,5,0,10.5,6.1,99,93.1,0,1 Primary or less,0,Catholic
+265,21,7,5,0,11.7,6.5,85,94.48,1,4 Tertiary,0,Catholic
+273,21,7,5,0,10.3,5.5,87,98.62,0,1 Primary or less,0,Catholic
+424,21,7,5,0,10.8,6.7,95,92.41,1,3 Secondary complete,0,No answer
+429,21,7,5,1,10.8,5.8,88,97.24,1,3 Secondary complete,0,Evangelical
+471,21,7,5,0,10.8,6.7,94,91.03,1,3 Secondary complete,0,No answer
+491,21,7,5,1,12.6,5.5,89,90.34,1,3 Secondary complete,1,Catholic
+500,21,7,5,0,10.8,5.3,92,98.62,0,1 Primary or less,0,Catholic
+508,21,7,5,0,10.2,6.2,93,95.86,1,3 Secondary complete,0,Evangelical
+550,21,7,5,1,11.7,5.2,91,96.55,1,3 Secondary complete,0,Evangelical
+596,21,7,5,1,10.5,6.1,76,95.86,0,2 Secondary incomplete,0,Evangelical
+606,21,7,5,0,10.2,6,85,93.1,0,2 Secondary incomplete,0,Catholic
+637,21,7,5,0,11.4,5.3,62,87.59,0,1 Primary or less,0,Catholic
+685,21,7,5,1,10.8,5.2,83,84.83,1,3 Secondary complete,0,Evangelical
+733,21,7,5,1,10.7,6.1,86,95.86,0,2 Secondary incomplete,0,Evangelical
+778,21,7,5,0,11,5.9,96,100,1,4 Tertiary,0,Evangelical
+790,21,7,5,0,11.3,5.4,94,100,1,3 Secondary complete,0,Catholic
+37,22,8,3,0,9.3,6.5,95.68,96,0,1 Primary or less,NA,Catholic
+94,22,8,3,0,9.8,5,99.28,95,0,1 Primary or less,NA,Catholic
+114,22,8,3,1,10.2,5.1,88.49,85,0,1 Primary or less,NA,Evangelical
+117,22,8,3,1,8.8,5.2,93.88,85,1,3 Secondary complete,NA,Catholic
+130,22,8,3,0,9.2,5.1,85.61,93,1,3 Secondary complete,NA,Catholic
+141,22,8,3,0,9,5.5,94.24,95,1,3 Secondary complete,NA,Catholic
+149,22,8,3,1,9.3,6.8,89.21,80,1,4 Tertiary,NA,Evangelical
+159,22,8,3,1,8.9,6.1,73.38,93,0,1 Primary or less,NA,Evangelical
+175,22,8,3,1,10.8,5.7,73.57,79,1,4 Tertiary,NA,Evangelical
+198,22,8,3,0,9.2,6.4,90.65,90,1,3 Secondary complete,NA,Evangelical
+204,22,8,3,0,9.3,6.3,94.24,87,0,2 Secondary incomplete,NA,Catholic
+255,22,8,3,0,9.7,5.8,72.14,77,1,3 Secondary complete,NA,Evangelical
+259,22,8,3,0,9.7,5.3,92.09,97,1,4 Tertiary,NA,Catholic
+291,22,8,3,0,9.2,6.4,94.96,95,0,1 Primary or less,NA,Evangelical
+353,22,8,3,0,8.4,6.2,97.12,NA,1,3 Secondary complete,NA,Evangelical
+383,22,8,3,1,9.4,5.6,89.29,89,0,2 Secondary incomplete,NA,Evangelical
+404,22,8,3,1,7.8,6.4,96.4,98,0,2 Secondary incomplete,NA,Evangelical
+463,22,8,3,1,9.3,6.4,98.56,95,1,3 Secondary complete,NA,Catholic
+477,22,8,3,0,9.7,5.4,97.84,98,1,4 Tertiary,NA,Evangelical
+495,22,8,3,1,8.9,6.5,87.86,88,0,2 Secondary incomplete,NA,Catholic
+535,22,8,3,1,8.7,5.7,92.81,92,1,3 Secondary complete,NA,Evangelical
+543,22,8,3,1,9.7,5.5,89.93,95,0,1 Primary or less,NA,Catholic
+599,22,8,3,0,7.8,5,85.61,80,0,1 Primary or less,NA,Catholic
+624,22,8,3,1,9.4,6.6,91.37,91,1,3 Secondary complete,NA,Evangelical
+647,22,8,3,0,8.8,5.1,79.12,95,0,2 Secondary incomplete,NA,Evangelical
+675,22,8,3,0,9.4,5.6,84.89,94,0,2 Secondary incomplete,NA,Catholic
+693,22,8,3,1,9.1,5.3,98.56,98,1,4 Tertiary,NA,Catholic
+700,22,8,3,0,10.2,5,91.37,98,0,2 Secondary incomplete,NA,Evangelical
+702,22,8,3,0,8.6,5.6,97.84,81,0,2 Secondary incomplete,NA,Evangelical
+707,22,8,3,1,8.7,4.8,88.49,83,0,1 Primary or less,NA,Catholic
+735,22,8,3,1,8.4,5.9,85.71,86,1,3 Secondary complete,NA,Evangelical
+789,22,8,3,0,9.9,5.2,96.4,95,1,3 Secondary complete,NA,No answer
+792,22,8,3,1,9.3,5.3,84.89,78,1,3 Secondary complete,NA,Evangelical
+794,22,8,3,0,8.4,6.3,86.33,87,0,1 Primary or less,NA,Catholic
+812,22,8,3,0,9.4,6.2,93.46,91,0,2 Secondary incomplete,NA,Catholic
+822,22,8,3,0,9.1,6.2,90,92,1,3 Secondary complete,NA,Evangelical
+832,22,8,3,1,8.6,5.5,84.17,92,1,3 Secondary complete,NA,Catholic
+836,22,8,3,0,9.1,5.9,92.81,80,1,3 Secondary complete,NA,Evangelical
+842,22,8,3,1,9.2,4.9,82,NA,0,1 Primary or less,NA,Evangelical
+10,23,8,4,1,9.8,5,85.6,87,1,3 Secondary complete,NA,Evangelical
+46,23,8,4,1,11.2,4.7,96.74,95,0,1 Primary or less,NA,Evangelical
+47,23,8,4,0,9.6,5.8,90,93,1,3 Secondary complete,NA,Catholic
+63,23,8,4,1,10.5,6.1,97.14,93,0,1 Primary or less,NA,Evangelical
+64,23,8,4,0,9.5,6.4,98.57,100,1,3 Secondary complete,NA,Evangelical
+77,23,8,4,0,9.3,6.5,98.57,98,1,3 Secondary complete,NA,Catholic
+137,23,8,4,1,9.6,6,95.71,96,1,3 Secondary complete,NA,Evangelical
+213,23,8,4,1,9.8,6.3,90,92,1,3 Secondary complete,NA,Catholic
+214,23,8,4,1,11.1,5.4,95,94,0,2 Secondary incomplete,NA,Catholic
+219,23,8,4,0,10.1,6.4,98.57,96,0,1 Primary or less,NA,Evangelical
+241,23,8,4,1,9.9,5.6,85,84,0,1 Primary or less,NA,Catholic
+250,23,8,4,1,9.6,6.2,84.29,84,0,1 Primary or less,NA,Evangelical
+253,23,8,4,0,10.1,6.4,92.86,90,1,4 Tertiary,NA,Catholic
+256,23,8,4,1,11.1,5.3,95,91,0,2 Secondary incomplete,NA,Catholic
+278,23,8,4,0,10.3,5.9,96.43,99,0,2 Secondary incomplete,NA,Evangelical
+289,23,8,4,0,11.5,5.9,94.29,100,1,3 Secondary complete,NA,Catholic
+326,23,8,4,1,9.8,5.6,85,75,0,2 Secondary incomplete,NA,Catholic
+347,23,8,4,1,NA,6.3,90.71,84,0,1 Primary or less,NA,Catholic
+377,23,8,4,0,10,5.4,95,95,0,1 Primary or less,NA,Catholic
+382,23,8,4,1,10.2,6.2,100,98,1,3 Secondary complete,NA,Catholic
+390,23,8,4,1,10.2,6.2,98.57,95,0,1 Primary or less,NA,Catholic
+455,23,8,4,1,10,6.4,97.14,97,1,3 Secondary complete,NA,Catholic
+492,23,8,4,0,10.2,6.1,86.43,96,0,2 Secondary incomplete,NA,Catholic
+518,23,8,4,1,9.7,5.9,88.37,87,1,4 Tertiary,NA,Evangelical
+536,23,8,4,1,9.6,6,86.03,87,1,3 Secondary complete,NA,Evangelical
+545,23,8,4,1,9.4,5.9,89.36,98,1,3 Secondary complete,NA,Evangelical
+574,23,8,4,1,9.9,5.1,97.62,96,0,1 Primary or less,NA,Evangelical
+593,23,8,4,0,9.5,5.8,87.86,89,1,4 Tertiary,NA,Catholic
+658,23,8,4,1,10,6.5,92.86,90,0,2 Secondary incomplete,NA,Catholic
+681,23,8,4,0,10.2,5.8,95.71,98,0,1 Primary or less,NA,Evangelical
+695,23,8,4,0,9.9,5.1,97.85,95,0,2 Secondary incomplete,NA,Evangelical
+739,23,8,4,1,10.4,5.4,85,86,0,1 Primary or less,NA,Catholic
+849,23,8,4,1,9.4,6.3,94.29,92,1,3 Secondary complete,NA,Catholic
+6,24,8,5,0,12,4.4,85.11,70,1,3 Secondary complete,NA,Catholic
+16,24,8,5,0,11,5.3,95.74,96,1,3 Secondary complete,NA,Catholic
+21,24,8,5,0,NA,5.2,80.14,82,0,1 Primary or less,NA,Evangelical
+55,24,8,5,1,10.3,6,91.49,93,0,1 Primary or less,NA,Catholic
+70,24,8,5,1,10.3,5.3,95.04,99,1,3 Secondary complete,NA,Catholic
+76,24,8,5,1,10.9,5.4,94.33,98,0,1 Primary or less,NA,Evangelical
+100,24,8,5,0,11.1,5.7,91.6,91,1,3 Secondary complete,NA,Evangelical
+108,24,8,5,1,10.5,6.5,91.49,98,1,3 Secondary complete,NA,Evangelical
+168,24,8,5,1,NA,5.5,95.04,95,1,3 Secondary complete,NA,Catholic
+191,24,8,5,0,11,5.6,97.87,94,0,1 Primary or less,NA,Evangelical
+218,24,8,5,0,10.7,4.6,93.62,90,1,3 Secondary complete,NA,Evangelical
+220,24,8,5,1,11.5,4.8,70.92,87,0,1 Primary or less,NA,Evangelical
+307,24,8,5,1,NA,5,83.69,85,1,3 Secondary complete,NA,Evangelical
+323,24,8,5,0,12.6,4.8,81.56,91,1,3 Secondary complete,NA,Catholic
+342,24,8,5,0,11.3,6.1,90.09,91,1,3 Secondary complete,NA,Catholic
+413,24,8,5,1,10.7,5.6,98.58,100,0,1 Primary or less,NA,Evangelical
+415,24,8,5,1,11.1,4.9,87.94,93,1,3 Secondary complete,NA,Evangelical
+418,24,8,5,1,10.5,5.5,92.91,97,0,1 Primary or less,NA,Evangelical
+447,24,8,5,0,10.9,6,97.87,96,0,2 Secondary incomplete,NA,Catholic
+461,24,8,5,0,11.1,5.2,92.2,93,1,3 Secondary complete,NA,No answer
+524,24,8,5,1,10.7,4.9,81.56,82,0,2 Secondary incomplete,NA,Evangelical
+568,24,8,5,1,10.9,6.1,92.2,95,1,3 Secondary complete,NA,Catholic
+587,24,8,5,1,10.8,5.3,90.07,93,0,1 Primary or less,NA,Evangelical
+592,24,8,5,0,10.7,4.9,89.36,85,0,2 Secondary incomplete,NA,Catholic
+639,24,8,5,0,10.9,5.1,95.04,95,0,1 Primary or less,NA,Catholic
+679,24,8,5,0,10.8,5.9,98.58,94,1,3 Secondary complete,NA,Catholic
+688,24,8,5,1,10.5,6.5,99.29,99,1,3 Secondary complete,NA,Catholic
+771,24,8,5,0,10.5,5.7,93.62,92,1,3 Secondary complete,NA,Catholic
+772,24,8,5,1,10.8,4.8,81.56,86,1,3 Secondary complete,NA,Catholic
+791,24,8,5,0,10.9,4.6,84.4,85,0,1 Primary or less,NA,Evangelical
+809,24,8,5,0,11,5.1,85.11,83,0,1 Primary or less,NA,Catholic
+59,25,9,3,1,9.2,6.1,94,76.92,1,4 Tertiary,0,Evangelical
+89,25,9,3,1,9.1,5,81,76.92,0,1 Primary or less,0,Catholic
+98,25,9,3,1,8.7,6.8,92,95.86,1,3 Secondary complete,0,Catholic
+154,25,9,3,1,9.9,5.2,55,49.7,0,1 Primary or less,0,Evangelical
+155,25,9,3,1,9,5.9,88,89.35,1,4 Tertiary,0,Catholic
+192,25,9,3,1,8.2,6.7,91,96.45,1,3 Secondary complete,0,Catholic
+222,25,9,3,1,8.3,6.2,95,97.04,1,3 Secondary complete,0,Evangelical
+235,25,9,3,1,10.1,4.7,69,84.62,0,2 Secondary incomplete,1,Catholic
+262,25,9,3,1,8.8,6.8,89,95.27,0,1 Primary or less,0,Evangelical
+325,25,9,3,1,9.3,6.6,96,95.27,0,1 Primary or less,0,Catholic
+355,25,9,3,1,8.7,6.5,71,75.74,1,3 Secondary complete,0,No answer
+364,25,9,3,1,9.1,6.6,85,97.04,0,2 Secondary incomplete,0,Evangelical
+372,25,9,3,1,8.4,6.5,96,96.45,1,4 Tertiary,0,Evangelical
+394,25,9,3,1,9.1,6.6,64,81.07,0,1 Primary or less,0,Evangelical
+411,25,9,3,1,9,5.3,85,82.25,0,1 Primary or less,0,Catholic
+481,25,9,3,1,8.9,6,98,98.82,1,3 Secondary complete,0,Evangelical
+494,25,9,3,1,8.6,6.1,76,86.39,0,2 Secondary incomplete,0,Catholic
+686,25,9,3,1,9.2,6.4,77,90.53,0,1 Primary or less,0,Evangelical
+704,25,9,3,1,8.8,7,94,97.04,1,3 Secondary complete,0,Catholic
+727,25,9,3,1,8.7,6.2,85,86.39,1,3 Secondary complete,0,Catholic
+758,25,9,3,1,8.5,6.3,100,89.58,0,2 Secondary incomplete,0,Evangelical
+759,25,9,3,1,8.3,6.8,94,95.27,1,3 Secondary complete,0,Evangelical
+776,25,9,3,1,8.4,6.6,94,97.04,0,1 Primary or less,0,Catholic
+797,25,9,3,1,9,6.4,98,99.41,0,1 Primary or less,0,Evangelical
+826,25,9,3,1,8.7,6.8,87,88.76,1,3 Secondary complete,0,Catholic
+26,26,9,4,1,11.7,6.3,67,63.91,1,3 Secondary complete,0,Evangelical
+36,26,9,4,1,9.5,6,95,91.72,1,4 Tertiary,0,Catholic
+52,26,9,4,1,9.3,6.5,93,100,0,2 Secondary incomplete,0,Catholic
+74,26,9,4,1,10.2,5.8,92,91.12,0,2 Secondary incomplete,0,Evangelical
+157,26,9,4,1,9.4,6.3,68,71.01,0,2 Secondary incomplete,0,No answer
+173,26,9,4,1,9.2,6.7,93,98.22,0,1 Primary or less,0,No answer
+238,26,9,4,1,9.8,6.5,83,88.17,1,3 Secondary complete,0,Catholic
+423,26,9,4,1,9.4,6.4,95,97.63,0,2 Secondary incomplete,0,Catholic
+428,26,9,4,1,10.5,4.8,50,75.15,0,2 Secondary incomplete,0,Catholic
+537,26,9,4,1,11,4.9,83,73.37,0,1 Primary or less,0,Evangelical
+671,26,9,4,1,9.4,5.9,86,76.92,1,3 Secondary complete,0,Evangelical
+678,26,9,4,1,9.5,6.2,81,66.86,0,1 Primary or less,0,No answer
+788,26,9,4,1,9.6,6.4,98,98.22,1,3 Secondary complete,0,Evangelical
+806,26,9,4,1,10.4,5.8,79,79.88,1,3 Secondary complete,1,Evangelical
+15,27,9,5,1,10.8,6,79,83.43,1,3 Secondary complete,0,Evangelical
+20,27,9,5,1,10.6,5.5,93,93.49,0,1 Primary or less,0,Evangelical
+50,27,9,5,1,10.4,6.2,92,94.67,0,2 Secondary incomplete,0,Catholic
+103,27,9,5,1,10.5,6.2,89,92.9,0,2 Secondary incomplete,0,Catholic
+128,27,9,5,1,11,6.3,91,92.31,0,1 Primary or less,0,Evangelical
+209,27,9,5,1,10.9,5.5,76,84.02,1,3 Secondary complete,0,Evangelical
+302,27,9,5,1,11.1,6.1,79,88.17,1,3 Secondary complete,0,Catholic
+304,27,9,5,1,11.5,6.4,92,92.31,1,3 Secondary complete,1,Catholic
+316,27,9,5,1,11.9,5.4,69,77.51,0,2 Secondary incomplete,0,Evangelical
+373,27,9,5,1,10.4,5.8,88,84.62,0,1 Primary or less,0,Evangelical
+569,27,9,5,1,10.3,6.3,87,91.72,1,3 Secondary complete,0,Catholic
+576,27,9,5,1,10.6,6.7,87,91.72,1,3 Secondary complete,0,Catholic
+746,27,9,5,1,10.3,5.4,84,86.98,1,3 Secondary complete,0,Evangelical
+813,27,9,5,1,10.3,6.7,98,97.63,1,4 Tertiary,0,Catholic
+147,28,10,3,1,8.7,4.5,83,87.5,0,2 Secondary incomplete,0,Catholic
+152,28,10,3,0,8.6,6.5,78,86.9,0,2 Secondary incomplete,0,No answer
+172,28,10,3,1,10.4,6.4,98,94.05,0,1 Primary or less,1,Catholic
+282,28,10,3,1,8.5,5.1,62,80.95,0,2 Secondary incomplete,0,Evangelical
+303,28,10,3,1,10.3,6.2,96,91.67,0,1 Primary or less,1,Catholic
+324,28,10,3,0,8.5,4.7,69,69.05,0,2 Secondary incomplete,0,Evangelical
+333,28,10,3,0,8.6,5.1,56,87.5,0,1 Primary or less,0,Evangelical
+367,28,10,3,0,8.8,6.5,78,91.67,0,1 Primary or less,0,Catholic
+368,28,10,3,0,8.4,6.3,97,86.31,1,3 Secondary complete,0,Evangelical
+371,28,10,3,1,8.4,5.9,76,94.96,1,3 Secondary complete,0,Catholic
+397,28,10,3,0,10.8,5.9,92,86.31,0,2 Secondary incomplete,1,Catholic
+400,28,10,3,0,9.3,5.2,74,85.12,0,1 Primary or less,1,Catholic
+506,28,10,3,0,8.7,5.8,66,98.21,0,1 Primary or less,0,Evangelical
+539,28,10,3,0,8.5,5.7,90,86.9,1,3 Secondary complete,0,Catholic
+564,28,10,3,0,9.3,5.9,82,89.88,1,3 Secondary complete,0,Evangelical
+628,28,10,3,0,8.8,5.4,88,72.02,0,2 Secondary incomplete,0,No answer
+731,28,10,3,0,9.1,5.4,69,98.81,0,1 Primary or less,0,Catholic
+763,28,10,3,0,10.5,6.1,100,85.71,0,1 Primary or less,1,Evangelical
+838,28,10,3,0,9.5,5.9,91,77.98,0,1 Primary or less,1,Evangelical
+841,28,10,3,1,11.3,5.3,82,91.67,0,2 Secondary incomplete,1,Evangelical
+846,28,10,3,1,8.7,5.4,71,70.83,1,3 Secondary complete,1,Evangelical
+858,28,10,3,1,9,6.7,88,96.43,0,1 Primary or less,0,Evangelical
+54,29,10,3,0,10.3,5,81,76.88,0,1 Primary or less,1,Evangelical
+60,29,10,3,1,9.4,6.6,98,98.75,0,2 Secondary incomplete,0,Catholic
+385,29,10,3,1,10.9,5.3,76,92.5,0,1 Primary or less,1,Evangelical
+457,29,10,3,1,8.5,6.2,93,96.88,0,2 Secondary incomplete,0,Catholic
+485,29,10,3,1,8.6,5.1,67,82.5,0,1 Primary or less,0,No answer
+493,29,10,3,1,8.8,6.3,94,93.75,1,3 Secondary complete,0,Catholic
+519,29,10,3,0,8.6,5.9,99,96.88,1,3 Secondary complete,0,Catholic
+521,29,10,3,1,11.2,5.7,97,97.5,0,2 Secondary incomplete,1,Catholic
+622,29,10,3,0,10.4,5.6,81,85.71,0,1 Primary or less,1,Evangelical
+665,29,10,3,1,8.6,5.1,91,91.25,1,3 Secondary complete,0,Evangelical
+684,29,10,3,0,9.2,5.3,84,85,1,3 Secondary complete,0,Catholic
+744,29,10,3,0,8.5,5.1,93,91.37,0,1 Primary or less,0,Evangelical
+780,29,10,3,1,9.1,6.4,98,97.5,0,2 Secondary incomplete,0,No answer
+8,30,10,4,0,9.3,5.3,87,86.86,0,2 Secondary incomplete,0,Catholic
+33,30,10,4,0,10.2,5.4,83,88,0,1 Primary or less,1,Catholic
+95,30,10,4,0,9.3,5.6,93,86.29,1,3 Secondary complete,0,Catholic
+104,30,10,4,0,9.7,6.6,82,96.57,1,3 Secondary complete,0,No answer
+165,30,10,4,1,9.6,6.1,92,97.71,1,3 Secondary complete,0,Evangelical
+197,30,10,4,1,10.4,5.1,80,82.29,0,2 Secondary incomplete,1,Evangelical
+211,30,10,4,1,9.4,5.5,87,78.29,1,3 Secondary complete,0,Evangelical
+254,30,10,4,1,9.7,6.2,85,87.43,0,1 Primary or less,0,Catholic
+279,30,10,4,0,9.9,6.8,95,97.71,0,1 Primary or less,0,Evangelical
+280,30,10,4,0,10.1,5.9,97,85.71,0,1 Primary or less,0,Catholic
+321,30,10,4,0,10.1,5.5,79,73.14,0,2 Secondary incomplete,0,Evangelical
+378,30,10,4,0,9.3,5.1,94,90.86,0,1 Primary or less,0,Evangelical
+435,30,10,4,1,9.8,5.1,80,76.57,0,1 Primary or less,0,Evangelical
+488,30,10,4,0,9.4,6.4,83,82.86,1,3 Secondary complete,0,Catholic
+571,30,10,4,1,9.8,6.4,83,90.86,0,2 Secondary incomplete,0,Catholic
+578,30,10,4,1,10,6.3,93,92.57,0,2 Secondary incomplete,0,Catholic
+603,30,10,4,1,10.8,4.7,100,99.43,0,1 Primary or less,1,Catholic
+638,30,10,4,0,11.4,6.3,98,78.86,0,1 Primary or less,0,Catholic
+673,30,10,4,1,10.4,5.1,54,50.23,0,1 Primary or less,1,Evangelical
+710,30,10,4,1,10,5.6,74,81.71,0,2 Secondary incomplete,0,Evangelical
+795,30,10,4,0,10,6.3,95,94.86,0,1 Primary or less,0,Catholic
+815,30,10,4,0,9.8,5.5,84,76,0,1 Primary or less,0,No answer
+4,31,10,4,1,12.1,5.4,90,88.24,1,3 Secondary complete,1,Evangelical
+91,31,10,4,1,10.5,6.3,83,94.71,0,1 Primary or less,0,Evangelical
+96,31,10,4,1,10.3,6.4,90,94.71,0,1 Primary or less,0,Evangelical
+142,31,10,4,0,9.3,4.4,85,68.85,0,1 Primary or less,0,Evangelical
+226,31,10,4,1,10,5.7,83,86.47,0,2 Secondary incomplete,0,Evangelical
+313,31,10,4,1,11.8,5.8,80,75.29,0,1 Primary or less,1,Catholic
+314,31,10,4,0,9.8,5.9,48,85.88,1,3 Secondary complete,0,Catholic
+357,31,10,4,1,11.7,5.4,80,97.65,0,1 Primary or less,1,Evangelical
+363,31,10,4,1,11.2,6,89,84.71,0,1 Primary or less,1,Evangelical
+412,31,10,4,0,10.2,6.5,84,84.12,0,1 Primary or less,0,Catholic
+436,31,10,4,0,10.1,5.5,73,70.59,0,2 Secondary incomplete,0,Evangelical
+440,31,10,4,0,10.4,4.5,86,54.12,0,1 Primary or less,0,Evangelical
+441,31,10,4,1,9.3,5.7,89,85.88,0,1 Primary or less,0,Evangelical
+453,31,10,4,0,10,5.9,81,89.41,1,3 Secondary complete,0,Evangelical
+497,31,10,4,0,9.3,6.2,91,96.47,0,1 Primary or less,0,Evangelical
+602,31,10,4,0,9.4,5.9,96,88.24,1,3 Secondary complete,0,Catholic
+616,31,10,4,1,10.6,4.8,97,87.06,1,3 Secondary complete,0,Catholic
+632,31,10,4,0,9.5,5.2,77,77.65,0,2 Secondary incomplete,0,Evangelical
+722,31,10,4,0,9.3,5,82,88.82,0,2 Secondary incomplete,0,Evangelical
+803,31,10,4,1,10.2,5.6,61,91.18,0,1 Primary or less,0,Evangelical
+816,31,10,4,1,10.5,5.8,84,95.88,0,2 Secondary incomplete,1,Evangelical
+851,31,10,4,0,10.2,5,64,75.29,0,1 Primary or less,0,Evangelical
+7,32,10,5,0,11.1,5.2,85,85.21,0,2 Secondary incomplete,0,Evangelical
+18,32,10,5,1,10.5,5.7,97,94.08,0,2 Secondary incomplete,0,Evangelical
+78,32,10,5,1,11.1,6,98,96.45,0,1 Primary or less,0,Evangelical
+111,32,10,5,1,10.9,6.2,95,97.04,0,2 Secondary incomplete,0,No answer
+140,32,10,5,0,12.8,6.2,99,85.8,0,1 Primary or less,0,Catholic
+164,32,10,5,0,10.5,5.2,80,65.68,0,1 Primary or less,0,Catholic
+207,32,10,5,1,10.5,6.3,87,88.14,0,1 Primary or less,0,Evangelical
+233,32,10,5,1,11.1,5.9,85,96.45,0,1 Primary or less,0,No answer
+239,32,10,5,0,11.1,4.9,98,84.02,1,3 Secondary complete,0,Evangelical
+269,32,10,5,0,10.4,5.7,94,89.35,0,1 Primary or less,0,Evangelical
+344,32,10,5,0,12.2,5,99,92.31,1,3 Secondary complete,1,Evangelical
+362,32,10,5,0,12.8,6.4,95,85.21,0,1 Primary or less,1,Catholic
+406,32,10,5,0,12.5,5.2,94,92.9,1,3 Secondary complete,1,No answer
+417,32,10,5,0,11.2,5,91,78.11,0,1 Primary or less,0,Evangelical
+419,32,10,5,1,10.5,5,74,75.74,1,3 Secondary complete,0,Evangelical
+456,32,10,5,1,12.7,6.8,75,73.96,0,1 Primary or less,1,Evangelical
+465,32,10,5,0,11.4,5.8,91,97.63,1,3 Secondary complete,1,Catholic
+517,32,10,5,0,10.4,6.1,96,91.72,0,2 Secondary incomplete,0,Evangelical
+529,32,10,5,1,11,5,71,78.11,0,1 Primary or less,0,Catholic
+577,32,10,5,1,13.5,5.5,83,79.88,0,2 Secondary incomplete,1,Catholic
+625,32,10,5,1,10.9,6.5,99,98.22,0,1 Primary or less,0,Evangelical
+634,32,10,5,0,10.4,5.4,97,98.82,0,1 Primary or less,0,Catholic
+663,32,10,5,1,11.5,6,97,100,0,2 Secondary incomplete,1,Catholic
+664,32,10,5,1,12.1,6.1,91,95.86,1,3 Secondary complete,0,Evangelical
+708,32,10,5,1,13.1,6.5,95,97.63,0,2 Secondary incomplete,1,Evangelical
+725,32,10,5,1,10.7,5.8,88,89.35,1,3 Secondary complete,0,Evangelical
+738,32,10,5,0,10.8,5.3,80,75.15,0,2 Secondary incomplete,0,Evangelical
+814,32,10,5,1,10.5,6,91,88.76,0,2 Secondary incomplete,0,Catholic
+14,33,11,3,0,9.1,5.9,94,81,1,3 Secondary complete,0,Catholic
+32,33,11,3,0,9.1,5.5,77,86,1,4 Tertiary,0,Catholic
+90,33,11,3,0,9.1,6,97,100,0,1 Primary or less,0,Evangelical
+138,33,11,3,0,9,6,89,91,1,3 Secondary complete,0,Catholic
+298,33,11,3,0,8.2,6.2,89,83,1,3 Secondary complete,0,Catholic
+337,33,11,3,0,8.8,4.5,91,92,0,2 Secondary incomplete,0,Catholic
+370,33,11,3,0,8.5,6.1,95,91,1,3 Secondary complete,0,Evangelical
+448,33,11,3,0,9.1,5.1,90,94,1,3 Secondary complete,0,Evangelical
+454,33,11,3,0,8.5,4.3,81,80,0,1 Primary or less,0,Evangelical
+475,33,11,3,0,8.2,5.2,93,95,1,3 Secondary complete,0,Evangelical
+499,33,11,3,0,8.6,5.4,90,98,1,4 Tertiary,0,Catholic
+747,33,11,3,0,8.8,6.2,96,95,1,4 Tertiary,0,Evangelical
+831,33,11,3,0,8.7,6.4,93,94,0,2 Secondary incomplete,0,Catholic
+843,33,11,3,0,8.7,6.7,88,90,0,1 Primary or less,0,Catholic
+61,34,11,4,0,9.8,5.8,81,89,1,4 Tertiary,0,Catholic
+93,34,11,4,0,10,6.3,96,97,1,3 Secondary complete,0,Catholic
+119,34,11,4,0,10.4,5.8,91,96,1,3 Secondary complete,0,No answer
+129,34,11,4,0,9.7,6.4,96,95,1,3 Secondary complete,0,Catholic
+185,34,11,4,0,10.2,5.7,82,91,0,2 Secondary incomplete,0,Catholic
+295,34,11,4,0,10.6,5.3,92,95,1,4 Tertiary,0,Catholic
+474,34,11,4,0,10.2,5.9,95,97,1,3 Secondary complete,0,Catholic
+533,34,11,4,0,10.3,6.4,96,97,1,3 Secondary complete,0,Evangelical
+553,34,11,4,0,9.3,5.2,81,91,1,3 Secondary complete,0,Catholic
+640,34,11,4,0,10.2,6.3,91,95,1,3 Secondary complete,0,Catholic
+641,34,11,4,0,10.2,6,93,94,1,4 Tertiary,0,Evangelical
+799,34,11,4,0,11.3,6.3,94,95,1,3 Secondary complete,0,Catholic
+208,35,11,5,0,11.3,6.1,96,98,1,3 Secondary complete,NA,Catholic
+283,35,11,5,0,11.2,6.8,95,98,1,4 Tertiary,NA,Catholic
+338,35,11,5,0,10.5,6.3,85,89,1,3 Secondary complete,NA,Catholic
+401,35,11,5,0,11,6.6,88,95,1,4 Tertiary,NA,Catholic
+476,35,11,5,0,10.4,5.4,91,95,1,3 Secondary complete,NA,Evangelical
+528,35,11,5,0,12,5.5,96,91,0,2 Secondary incomplete,NA,Evangelical
+656,35,11,5,0,11.3,6.6,98,97,1,3 Secondary complete,NA,Evangelical
+845,35,11,5,0,11.1,6.4,90,93,1,3 Secondary complete,NA,Catholic
+850,35,11,5,0,10.4,6.6,95,92,0,2 Secondary incomplete,NA,Catholic
+855,35,11,5,0,10.2,6.1,96,94,0,2 Secondary incomplete,NA,Catholic
+34,36,12,3,0,8.4,6.2,97.3,95.06,0,2 Secondary incomplete,0,Catholic
+182,36,12,3,1,9.2,6.5,97.84,100,0,2 Secondary incomplete,0,Catholic
+346,36,12,3,0,10.2,5.1,85.95,100,0,1 Primary or less,0,Catholic
+384,36,12,3,1,9.6,5.8,86.49,96.3,0,2 Secondary incomplete,1,Catholic
+422,36,12,3,0,9,6.7,95.12,86.42,1,3 Secondary complete,0,Catholic
+425,36,12,3,0,8.8,5.3,94.05,86.42,0,1 Primary or less,0,Catholic
+520,36,12,3,1,9,6.3,98.92,100,1,3 Secondary complete,0,Catholic
+556,36,12,3,1,10.7,6.1,90.81,71.6,1,3 Secondary complete,0,Catholic
+584,36,12,3,0,9.1,5.9,94.05,100,0,1 Primary or less,0,Catholic
+737,36,12,3,1,8.3,5.7,81.62,91.36,0,1 Primary or less,0,Catholic
+755,36,12,3,1,11.3,4.7,42.16,70.37,0,1 Primary or less,1,Catholic
+787,36,12,3,1,9,5.8,97.3,92.59,0,1 Primary or less,0,Catholic
+271,37,12,4,0,9.5,5.5,87.57,93.85,0,2 Secondary incomplete,0,Evangelical
+274,37,12,4,0,12.4,4.8,85.95,94.41,0,2 Secondary incomplete,0,Evangelical
+376,37,12,4,0,9.9,5,95.14,86.03,1,3 Secondary complete,0,Catholic
+437,37,12,4,0,10,6.7,91.89,95.53,1,4 Tertiary,0,Catholic
+554,37,12,4,0,10.2,5.6,97.04,93.85,0,1 Primary or less,0,Evangelical
+600,37,12,4,0,10,5.5,94.59,81.01,1,3 Secondary complete,0,Evangelical
+645,37,12,4,1,10.4,5.4,86.49,82.12,0,2 Secondary incomplete,1,Evangelical
+736,37,12,4,1,10.2,6.4,97.84,72.63,1,4 Tertiary,0,Catholic
+828,37,12,4,0,8.8,5.7,81.2,85.47,0,2 Secondary incomplete,0,Evangelical
+857,37,12,4,0,9.5,5.5,100,94.41,1,3 Secondary complete,0,Catholic
+81,38,12,5,0,12.6,4.9,94.59,92.74,0,1 Primary or less,0,Evangelical
+118,38,12,5,1,10.4,5.9,86.49,69.83,0,1 Primary or less,0,Evangelical
+132,38,12,5,1,11,5.6,91.35,98.88,0,1 Primary or less,0,Evangelical
+340,38,12,5,1,11.3,5.5,89.19,97.77,0,1 Primary or less,0,Evangelical
+403,38,12,5,1,10.3,5.8,98.38,96.65,1,3 Secondary complete,0,Catholic
+473,38,12,5,0,11,5.3,94.59,89.39,1,3 Secondary complete,0,No answer
+507,38,12,5,0,14.5,5.5,91.35,91.06,0,1 Primary or less,1,Catholic
+516,38,12,5,0,11.4,5.4,95.14,93.3,1,4 Tertiary,0,No answer
+542,38,12,5,0,11.1,5.2,92.97,87.71,1,3 Secondary complete,0,Evangelical
+557,38,12,5,0,13.2,5.2,84.32,83.8,0,2 Secondary incomplete,1,Catholic
+559,38,12,5,0,11,5.3,92.43,93.85,1,3 Secondary complete,0,No answer
+588,38,12,5,0,11.8,4.8,24.04,51.4,0,2 Secondary incomplete,1,Evangelical
+629,38,12,5,1,10.8,5.7,92.43,92.18,1,3 Secondary complete,0,Catholic
+666,38,12,5,0,10.8,5.5,82.16,94.41,0,2 Secondary incomplete,0,No answer
+703,38,12,5,0,11,6.7,96.76,98.32,0,2 Secondary incomplete,0,Catholic
+748,38,12,5,1,10.7,6.6,95.68,97.77,1,3 Secondary complete,0,Evangelical
+775,38,12,5,0,13.1,4.7,72.43,89.39,1,4 Tertiary,1,Catholic
+31,39,13,4,1,9.6,6.4,93,99.43,1,4 Tertiary,0,No answer
+75,39,13,4,1,9.7,5.8,97,97.14,1,4 Tertiary,0,No answer
+115,39,13,4,1,10.3,5.7,97,97.14,0,1 Primary or less,0,No answer
+184,39,13,4,1,10.2,5.1,75,92,1,3 Secondary complete,0,No answer
+217,39,13,4,1,9.2,6.6,98,100,1,3 Secondary complete,0,No answer
+223,39,13,4,1,10,6.5,95,89.71,1,3 Secondary complete,0,No answer
+263,39,13,4,1,9.6,6,96,97.71,1,3 Secondary complete,0,No answer
+285,39,13,4,1,9.3,6.6,89,84,1,4 Tertiary,0,No answer
+296,39,13,4,1,10.3,6.1,89,80,0,2 Secondary incomplete,1,No answer
+318,39,13,4,1,9.9,6,97,98.86,1,3 Secondary complete,0,No answer
+386,39,13,4,1,9.8,6.4,97,99.43,1,4 Tertiary,0,No answer
+432,39,13,4,1,9.6,6.2,88,94.86,1,3 Secondary complete,0,No answer
+443,39,13,4,1,9.7,6.1,96,100,1,3 Secondary complete,0,No answer
+470,39,13,4,1,10.1,5.9,88,85.71,0,2 Secondary incomplete,0,No answer
+502,39,13,4,1,9.9,5.5,95,97.14,0,2 Secondary incomplete,0,No answer
+590,39,13,4,1,10.2,6.8,94,96.57,1,3 Secondary complete,0,No answer
+642,39,13,4,1,9.7,5.2,88,89.14,1,4 Tertiary,0,No answer
+694,39,13,4,1,9.7,5.4,79,81.14,1,3 Secondary complete,0,No answer
+697,39,13,4,1,9.4,6.7,92,90.29,1,3 Secondary complete,0,No answer
+740,39,13,4,1,10,5.9,91,92,1,3 Secondary complete,0,No answer
+753,39,13,4,1,9.9,6.8,94,93.71,1,4 Tertiary,0,No answer
+764,39,13,4,1,9.3,6.3,95,98.29,1,3 Secondary complete,0,No answer
+765,39,13,4,1,10.4,5.8,91,98.29,1,3 Secondary complete,1,No answer
+769,39,13,4,1,9.6,6.4,95,97.14,0,2 Secondary incomplete,0,No answer
+810,39,13,4,1,9.6,6.4,99,99.43,1,3 Secondary complete,0,No answer
+834,39,13,4,1,9.9,6.5,98,98.86,1,4 Tertiary,0,No answer
+29,40,13,4,1,9.5,5.9,88,88,0,2 Secondary incomplete,0,No answer
+53,40,13,4,1,9.8,5.7,88,89.14,1,3 Secondary complete,0,No answer
+80,40,13,4,1,10.3,5.3,85,93.14,1,3 Secondary complete,0,No answer
+84,40,13,4,1,9.2,6.2,76,89.71,1,4 Tertiary,0,No answer
+150,40,13,4,1,10.5,5.5,92,95.92,1,4 Tertiary,0,No answer
+160,40,13,4,1,9.9,5.4,88,80,0,2 Secondary incomplete,0,No answer
+170,40,13,4,1,10.3,5.3,71,77.71,0,1 Primary or less,0,No answer
+193,40,13,4,1,10.1,6.5,96,94.86,1,3 Secondary complete,0,No answer
+261,40,13,4,1,9.9,6.5,88,95.43,1,4 Tertiary,0,No answer
+292,40,13,4,1,9.9,5.6,83,81.14,1,3 Secondary complete,0,No answer
+335,40,13,4,1,9.3,5.4,94,97.71,0,1 Primary or less,0,No answer
+374,40,13,4,1,9.3,6.1,95,92,1,3 Secondary complete,0,No answer
+527,40,13,4,1,10.3,6.5,94,97.14,1,4 Tertiary,0,No answer
+601,40,13,4,1,9.7,5.7,92,97.71,1,4 Tertiary,0,No answer
+633,40,13,4,1,9.9,6,96,95.43,1,4 Tertiary,0,No answer
+646,40,13,4,1,10,5.9,94,98.86,1,3 Secondary complete,0,No answer
+743,40,13,4,1,9.6,5.4,88,92,0,2 Secondary incomplete,0,No answer
+785,40,13,4,1,9.8,5.7,91,96,1,3 Secondary complete,0,No answer
+12,41,13,4,1,9.5,6.2,87,94.86,1,3 Secondary complete,0,No answer
+148,41,13,4,1,10.1,6.1,91,93.71,0,1 Primary or less,1,No answer
+187,41,13,4,1,10,6.3,96,93.71,1,3 Secondary complete,0,No answer
+190,41,13,4,1,9.2,6.2,92,97.14,0,2 Secondary incomplete,0,No answer
+212,41,13,4,1,9.7,6.8,94,99.43,1,4 Tertiary,0,No answer
+317,41,13,4,1,9.5,5.6,96,96.57,1,3 Secondary complete,0,No answer
+349,41,13,4,1,10.2,6.7,99,96.57,1,4 Tertiary,0,No answer
+356,41,13,4,1,10.7,6,95,94.86,1,4 Tertiary,0,No answer
+359,41,13,4,1,10,6.5,90,93.14,1,3 Secondary complete,0,No answer
+360,41,13,4,1,9.6,5.8,85,94.29,1,3 Secondary complete,0,No answer
+438,41,13,4,1,10.3,6.6,92,96,1,3 Secondary complete,0,No answer
+467,41,13,4,1,9.6,6.1,96,98.29,1,3 Secondary complete,0,No answer
+534,41,13,4,1,9.4,6.2,96,94.86,1,3 Secondary complete,0,No answer
+563,41,13,4,1,9.4,6.5,88,91.43,1,3 Secondary complete,0,No answer
+617,41,13,4,1,9.8,6.5,94,92.57,1,3 Secondary complete,0,No answer
+643,41,13,4,1,9.6,6.4,89,88.57,1,4 Tertiary,0,No answer
+667,41,13,4,1,10.2,5.8,89,97.14,0,1 Primary or less,0,No answer
+719,41,13,4,1,9.7,6.2,90,91.43,1,4 Tertiary,0,No answer
+770,41,13,4,1,10.1,6.5,96,98.29,1,4 Tertiary,0,No answer
+824,41,13,4,1,9.5,5.3,96,93.14,0,1 Primary or less,0,No answer
+35,42,14,3,1,8.7,6.2,98,100,0,2 Secondary incomplete,0,Catholic
+56,42,14,3,1,9.3,6.4,100,94.74,1,3 Secondary complete,0,Catholic
+62,42,14,3,1,8.9,5.8,94,99.42,1,3 Secondary complete,0,Catholic
+122,42,14,3,1,8.4,6.4,98,98.83,1,3 Secondary complete,0,Evangelical
+206,42,14,3,1,8.2,6.7,98,99.42,1,3 Secondary complete,0,Catholic
+243,42,14,3,1,9.2,6.8,98,99.42,1,3 Secondary complete,0,Catholic
+299,42,14,3,1,8.5,6.4,100,98.83,1,4 Tertiary,0,Catholic
+311,42,14,3,1,9.2,5.9,77,82.46,1,4 Tertiary,0,Evangelical
+407,42,14,3,1,10,6.4,90,80.7,0,2 Secondary incomplete,1,Catholic
+442,42,14,3,1,8.3,6.7,96,100,1,3 Secondary complete,0,Catholic
+444,42,14,3,1,8.8,6.5,93,95.32,1,3 Secondary complete,0,Evangelical
+450,42,14,3,1,8.5,5.5,88.4,88.61,0,2 Secondary incomplete,0,Evangelical
+498,42,14,3,1,8.8,6.1,94,91.23,1,3 Secondary complete,0,Evangelical
+515,42,14,3,1,9.3,6.1,100,99.42,1,4 Tertiary,0,Evangelical
+620,42,14,3,1,8.4,6.2,99,98.83,1,4 Tertiary,0,Catholic
+676,42,14,3,1,8.8,6.4,99,100,1,3 Secondary complete,0,Evangelical
+781,42,14,3,1,8.6,6.2,100,100,1,3 Secondary complete,0,Catholic
+802,42,14,3,1,8.6,6.9,100,100,1,4 Tertiary,0,Catholic
+44,43,14,3,1,9.2,6.2,100,96.27,0,1 Primary or less,0,Catholic
+106,43,14,3,1,9.1,5.7,93,86.96,1,3 Secondary complete,0,Catholic
+131,43,14,3,1,8.2,6.9,78,98.76,1,4 Tertiary,0,Catholic
+232,43,14,3,1,8.5,6.5,100,98.14,1,3 Secondary complete,0,Catholic
+240,43,14,3,1,8.5,6.5,98,93.17,0,1 Primary or less,0,Catholic
+275,43,14,3,1,9.7,6.1,93,79.5,1,3 Secondary complete,1,Catholic
+276,43,14,3,1,8.4,5.9,98,96.58,1,4 Tertiary,0,Catholic
+343,43,14,3,1,10.2,5.7,88,88.2,1,3 Secondary complete,1,Catholic
+409,43,14,3,1,9.6,4.8,90,88.2,1,3 Secondary complete,0,Catholic
+483,43,14,3,1,9.8,6.2,98,94.41,0,1 Primary or less,0,Evangelical
+583,43,14,3,1,8.5,6,99,92.55,0,2 Secondary incomplete,0,Catholic
+609,43,14,3,1,8.4,6.8,97,87.65,0,1 Primary or less,0,Catholic
+611,43,14,3,1,8.4,5.6,78,93.79,1,3 Secondary complete,0,Catholic
+635,43,14,3,1,9,5.9,98,91.93,0,1 Primary or less,0,Catholic
+705,43,14,3,1,8.9,5.9,100,93.79,1,3 Secondary complete,0,Catholic
+761,43,14,3,1,8.8,5.2,85,77.64,1,4 Tertiary,0,Catholic
+818,43,14,3,1,9.2,6.4,100,98.76,0,1 Primary or less,0,Evangelical
+844,43,14,3,1,8.7,6.6,94,92.55,1,3 Secondary complete,0,Catholic
+13,44,14,4,1,10,5.9,97,95.68,1,3 Secondary complete,0,Catholic
+38,44,14,4,1,10.2,6.6,85,91.36,1,3 Secondary complete,0,Evangelical
+79,44,14,4,1,10.2,6,96,96.91,1,3 Secondary complete,0,Catholic
+105,44,14,4,1,11,5.6,98,93.83,1,4 Tertiary,1,Evangelical
+109,44,14,4,1,9.9,6.4,90,93.83,1,3 Secondary complete,0,Catholic
+301,44,14,4,1,9.4,6.2,89,88.89,1,3 Secondary complete,0,Evangelical
+358,44,14,4,1,10,6.3,98,95.06,1,4 Tertiary,0,Evangelical
+365,44,14,4,1,9.4,5.7,94,94.44,0,2 Secondary incomplete,0,Catholic
+410,44,14,4,1,9.8,5.6,98,100,1,3 Secondary complete,0,Evangelical
+452,44,14,4,1,10.6,5.6,82,88.27,0,2 Secondary incomplete,0,Catholic
+540,44,14,4,1,9.9,5.3,73,74.69,1,3 Secondary complete,0,Catholic
+541,44,14,4,1,9.6,5.9,93,86.42,1,3 Secondary complete,0,Evangelical
+551,44,14,4,1,9.7,5.9,79,56.79,1,3 Secondary complete,0,Catholic
+649,44,14,4,1,10.1,6.6,89,99.38,1,3 Secondary complete,0,Evangelical
+661,44,14,4,1,10.3,5.5,98,93.21,1,4 Tertiary,0,Catholic
+696,44,14,4,1,10.4,6.4,95,96.91,0,1 Primary or less,0,Evangelical
+734,44,14,4,1,10.2,6.4,91,90.12,0,2 Secondary incomplete,0,Catholic
+741,44,14,4,1,9.7,6.1,97,94.44,1,3 Secondary complete,0,Evangelical
+800,44,14,4,1,9.7,6.3,99,98.77,0,2 Secondary incomplete,0,Catholic
+1,45,14,5,1,10.7,6.3,92,96.47,0,1 Primary or less,0,Catholic
+49,45,14,5,1,10.8,5.8,91,94.71,1,4 Tertiary,0,Catholic
+57,45,14,5,1,10.8,6.2,95,96.47,1,3 Secondary complete,0,Evangelical
+72,45,14,5,1,11.1,5.9,89,82.35,0,1 Primary or less,0,Catholic
+288,45,14,5,1,16.8,6.7,96,97.65,1,4 Tertiary,0,Catholic
+416,45,14,5,1,11.2,6.6,98,100,1,3 Secondary complete,0,Catholic
+464,45,14,5,1,11.9,5.5,89,94.71,1,3 Secondary complete,1,Catholic
+479,45,14,5,1,10.8,6.3,93,94.71,1,3 Secondary complete,0,Evangelical
+585,45,14,5,1,10.9,6.7,97,99.41,1,3 Secondary complete,0,Catholic
+594,45,14,5,1,11.3,6.5,100,100,1,3 Secondary complete,0,Catholic
+618,45,14,5,1,10.8,6.3,96,98.24,1,3 Secondary complete,0,Evangelical
+651,45,14,5,1,12,5.3,92,94.12,1,3 Secondary complete,0,Evangelical
+680,45,14,5,1,10.9,6.3,97,96.47,1,4 Tertiary,0,Catholic
+768,45,14,5,1,10.9,6.4,97,98.24,1,3 Secondary complete,0,Catholic
+782,45,14,5,1,11.3,6.2,98,100,1,3 Secondary complete,0,Catholic
